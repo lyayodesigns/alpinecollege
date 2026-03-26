@@ -1,0 +1,98 @@
+"use client";
+
+import { motion, useInView, useSpring, useTransform } from "framer-motion";
+import { useRef, useEffect, useState } from "react";
+
+const stats = [
+  {
+    number: 10,
+    suffix: "k",
+    title: "Students",
+    description: "At present, there are five departments within the Faculty: Department of Geography and Environment.",
+  },
+  {
+    number: 300,
+    suffix: "",
+    title: "Professors",
+    description: "At present, there are five departments within the Faculty: Department of Geography and Environment.",
+  },
+  {
+    number: 7,
+    suffix: "",
+    title: "Faculty",
+    description: "At present, there are five departments within the Faculty: Department of Geography and Environment.",
+  },
+];
+
+function AnimatedNumber({ value, suffix }: { value: number; suffix: string }) {
+  const [isInView, setIsInView] = useState(false);
+  const ref = useRef(null);
+  const spring = useSpring(0, { duration: 2000 });
+  const display = useTransform(spring, (current) => Math.floor(current));
+  const [displayValue, setDisplayValue] = useState(0);
+
+  useEffect(() => {
+    const unsubscribe = display.on("change", (latest) => {
+      setDisplayValue(latest);
+    });
+    return () => unsubscribe();
+  }, [display]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsInView(true);
+          spring.set(value);
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => observer.disconnect();
+  }, [spring, value]);
+
+  return (
+    <span ref={ref}>
+      {displayValue}
+      {suffix}
+    </span>
+  );
+}
+
+export default function CounterStats() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+
+  return (
+    <section ref={ref} className="counter-area">
+      <div className="container">
+        <div className="counter-single-item-wrap">
+          {stats.map((stat, index) => (
+            <motion.div
+              key={index}
+              className={`counter-single-item ${index === 1 ? "ml-left" : ""} ${index === 2 ? "pl-left" : ""}`}
+              initial={{ y: 50, opacity: 0.3, skewY: 4 }}
+              animate={isInView ? { y: 0, opacity: 1, skewY: 0 } : {}}
+              transition={{ duration: 0.6, delay: index * 0.15 }}
+            >
+              {index === 2 && <div className="line-two"></div>}
+              <div className="count-number">
+                <h3 className="count-number-title">
+                  <AnimatedNumber value={stat.number} suffix={stat.suffix} />
+                </h3>
+                <h1 className="count-title">{stat.title}</h1>
+              </div>
+              <p className="count-paragraph">{stat.description}</p>
+              {index < 2 && <div className="line"></div>}
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
