@@ -2,28 +2,28 @@
 
 import { motion, useInView } from "framer-motion";
 import Image from "next/image";
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState } from "react";
 
 const newsItems = [
   {
     category: "/Bachelor",
-    title: "Wildfire smoke exposure hurts learning outcomes",
+    title: "Wildfire Smoke Exposure Hurts Learning Outcomes",
   },
   {
     category: "/Bachelor",
-    title: "University Class of 2023 called to explore and engage",
+    title: "University Class Of 2023 Called To Explore And Engage",
   },
   {
     category: "/Bachelor",
-    title: "Battery technology research at American University",
+    title: "Battery Technology Research At American University",
   },
   {
     category: "/Bachelor",
-    title: "Wildfire smoke exposure hurts learning outcomes",
+    title: "Wildfire Smoke Exposure Hurts Learning Outcomes",
   },
   {
     category: "/Bachelor",
-    title: "Wildfire smoke exposure hurts learning outcomes",
+    title: "Wildfire Smoke Exposure Hurts Learning Outcomes",
   },
 ];
 
@@ -34,8 +34,8 @@ export default function News() {
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
-  const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 });
   const [showCursor, setShowCursor] = useState(false);
+  const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 });
 
   const handleMouseDown = (e: React.MouseEvent) => {
     if (!sliderRef.current) return;
@@ -43,64 +43,72 @@ export default function News() {
     setStartX(e.pageX - sliderRef.current.offsetLeft);
     setScrollLeft(sliderRef.current.scrollLeft);
   };
-
-  const handleMouseUp = () => {
-    setIsDragging(false);
-  };
-
+  const handleMouseUp = () => setIsDragging(false);
   const handleMouseMove = (e: React.MouseEvent) => {
     setCursorPos({ x: e.clientX, y: e.clientY });
     if (!isDragging || !sliderRef.current) return;
     e.preventDefault();
     const x = e.pageX - sliderRef.current.offsetLeft;
-    const walk = (x - startX) * 2;
-    sliderRef.current.scrollLeft = scrollLeft - walk;
+    sliderRef.current.scrollLeft = scrollLeft - (x - startX) * 2;
   };
-
   const handleMouseEnter = () => setShowCursor(true);
-  const handleMouseLeave = () => {
-    setShowCursor(false);
-    setIsDragging(false);
-  };
+  const handleMouseLeave = () => { setShowCursor(false); setIsDragging(false); };
 
   return (
-    <section ref={ref} className="bg-white py-20 lg:py-40 overflow-hidden">
-      {/* Custom Cursor */}
+    <section ref={ref} className="research-area" style={{ paddingTop: "160px", paddingBottom: "160px" }}>
+      {/* Custom drag cursor */}
       {showCursor && (
-        <div
-          className={`custom-cursor ${showCursor ? "visible" : ""}`}
-          style={{
-            left: cursorPos.x - 50,
-            top: cursorPos.y - 50,
-          }}
-        >
-          Drag
+        <div className="courser-area" style={{ pointerEvents: "none" }}>
+          <div
+            className="courser-wrap"
+            style={{ position: "fixed", left: cursorPos.x - 50, top: cursorPos.y - 50 }}
+          >
+            <span className="cursor-text">Drag</span>
+          </div>
         </div>
       )}
 
-      <div className="max-w-[1570px] mx-auto px-4 sm:px-6 lg:px-10">
-        {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
-          className="mb-8"
-        >
-          <h2 className="text-black text-3xl sm:text-4xl lg:text-5xl xl:text-[56px] font-normal leading-tight lg:leading-[75px] mb-6">
-            News & Articles
-          </h2>
-          <p className="text-black text-base lg:text-lg leading-7 lg:leading-8 max-w-[780px] font-normal normal-case">
-            Explore University&apos;s 10+ courses across various specialisations that
-            provoke intellectual and intuitive learning among students.
-          </p>
-        </motion.div>
+      <div className="container">
+        {/* Header */}
+        <div className="section-cotent-wrap grid-item">
+          <div className="grid-one">
+            <motion.h2
+              className="section-title dark"
+              initial={{ y: 100, opacity: 0 }}
+              animate={isInView ? { y: 0, opacity: 1 } : {}}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+            >
+              News &amp;
+            </motion.h2>
+            <motion.h2
+              className="section-title dark"
+              initial={{ y: 100, opacity: 0 }}
+              animate={isInView ? { y: 0, opacity: 1 } : {}}
+              transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
+            >
+              Articles
+            </motion.h2>
+          </div>
+          <div className="grid-two" style={{ paddingTop: "120px" }}>
+            <motion.p
+              className="section-paragraph white small"
+              style={{ color: "#000" }}
+              initial={{ y: 100, opacity: 0 }}
+              animate={isInView ? { y: 0, opacity: 1 } : {}}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              Explore University&apos;s 10+ courses across various specialisations that
+              provoke intellectual and intuitive learning among students.
+            </motion.p>
+          </div>
+        </div>
 
-        {/* News Slider */}
+        {/* Draggable Slider */}
         <motion.div
           initial={{ x: "100vw", opacity: 0 }}
           animate={isInView ? { x: 0, opacity: 1 } : {}}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="relative pt-12 lg:pt-24"
+          className="swiper-container"
         >
           <div
             ref={sliderRef}
@@ -109,36 +117,33 @@ export default function News() {
             onMouseMove={handleMouseMove}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
-            className="flex gap-6 lg:gap-12 overflow-x-auto cursor-grab active:cursor-grabbing scrollbar-hide pb-4"
-            style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+            className="news-post-wrap"
+            style={{
+              overflowX: "auto",
+              cursor: isDragging ? "grabbing" : "grab",
+              scrollbarWidth: "none",
+              msOverflowStyle: "none",
+            }}
           >
             {newsItems.map((item, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ x: 100 * (index + 1), opacity: 0 }}
-                animate={isInView ? { x: 0, opacity: 1 } : {}}
-                transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
-                className="flex-shrink-0 w-[300px] sm:w-[400px] lg:w-[620px] border border-black rounded-[20px] p-6 lg:p-12 select-none"
+                className="news-single-item"
+                style={{ flexShrink: 0 }}
               >
-                <div className="flex justify-between items-center mb-8 lg:mb-12">
-                  <span className="px-6 lg:px-7 py-3 lg:py-4 border border-black rounded-full text-base lg:text-[28px] font-normal text-black">
-                    {item.category}
-                  </span>
-                  <div className="w-12 h-12 lg:w-14 lg:h-14 rounded-full border border-black flex items-center justify-center">
+                <div className="event-tab-header-content" style={{ marginBottom: "48px" }}>
+                  <span className="event-category-button">{item.category}</span>
+                  <div className="tab-icon">
                     <Image
                       src="/images/arrow-right-dark.svg"
                       alt="Arrow"
                       width={24}
                       height={24}
-                      className="w-5 h-5 lg:w-6 lg:h-6"
                     />
                   </div>
                 </div>
-
-                <h3 className="text-black text-xl sm:text-2xl lg:text-[30px] font-normal leading-tight lg:leading-[130%] pt-12 lg:pt-44">
-                  {item.title}
-                </h3>
-              </motion.div>
+                <h3 className="tab-content-title style-01">{item.title}</h3>
+              </div>
             ))}
           </div>
         </motion.div>

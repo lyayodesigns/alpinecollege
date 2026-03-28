@@ -6,13 +6,13 @@ import { useRef } from "react";
 
 const facultyItems = [
   {
-    image: "https://uploads-ssl.webflow.com/63b50a8555c48170e0bd670f/63ba78efb73c8b9d670aedff_Rectangle%2019.jpg",
+    image: "/images/faculty1.jpg",
     category: "Bachelor",
     title: "Faculty of Earth and Environmental Sciences",
     description: "At present, there are five departments within the Faculty: Department of Geography and Environment, Geology, Oceanography, Disaster Science and Climate Resilience and Meteorology.",
   },
   {
-    image: "https://uploads-ssl.webflow.com/63b50a8555c48170e0bd670f/63ba78f3cfc084bdb56a1967_Rectangle%2020.png",
+    image: "/images/faculty2.png",
     category: "Bachelor",
     title: "Faculty of Engineering and Technology",
     description: "At present, there are five departments within the Faculty: Department of Geography and Environment, Geology, Oceanography, Disaster Science and Climate Resilience and Meteorology.",
@@ -140,7 +140,7 @@ export default function Faculty() {
             <div className="button-content relative z-10">
               <div className="primary-button-text">See All Faculty</div>
               <Image
-                src="https://uploads-ssl.webflow.com/63b50a8555c48170e0bd670f/63ba7e6bf28c5064304a8304_Icon.svg"
+                src="/images/icon.svg"
                 alt="Arrow"
                 width={20}
                 height={20}

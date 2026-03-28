@@ -1,6 +1,5 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
 
 :root {
   --primary-red: #af0e2e;
@@ -1260,4 +1259,106 @@ body {
   font-size: 18px;
   font-weight: 500;
   text-transform: uppercase;
-};
+}
+
+/* ========== NAVBAR ========== */
+.navbar-no-shadow {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: #af0e2e;
+}
+
+.navbar-no-shadow-container {
+  width: 100%;
+}
+
+.container-regular {
+  max-width: 1710px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.navbar-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.desktop-logo {
+  display: block;
+}
+
+.mobile-logo {
+  display: none;
+}
+
+.nav-menu-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.nav-menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 0;
+}
+
+.nav-menu li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-button {
+  display: none;
+}
+
+/* ========== BANNER / HERO ========== */
+.banner-thumbnail-wrap {
+  position: relative;
+}
+
+.banner-thumb {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  display: block;
+}
+
+/* ========== CUSTOM CURSOR ========== */
+.custom-cursor {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: rgba(175, 14, 46, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: transform 0.1s ease;
+}
+
+/* ========== SECTION CONTENT WRAP (no grid-item) ========== */
+.section-cotent-wrap {
+  padding-top: 120px;
+}
+
+

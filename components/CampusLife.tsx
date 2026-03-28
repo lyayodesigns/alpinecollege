@@ -28,7 +28,7 @@ export default function CampusLife() {
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <Image
-                src="https://uploads-ssl.webflow.com/63b50a8555c48170e0bd670f/63ba876ce7d3d48121fb0fd3_Group.png"
+                src="/images/spiral.png"
                 alt=""
                 width={150}
                 height={150}
@@ -78,7 +78,7 @@ export default function CampusLife() {
         transition={{ duration: 0.8, delay: 0.4 }}
       >
         <Image
-          src="https://uploads-ssl.webflow.com/63b50a8555c48170e0bd670f/63ba8a4c076d75643c64e8b7_Rectangle%2010.jpg"
+          src="/images/campus-life.jpg"
           alt="Campus Life"
           width={1728}
           height={800}
