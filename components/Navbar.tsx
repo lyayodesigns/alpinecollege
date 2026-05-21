@@ -14,7 +14,7 @@ const navLinks = [
 
 export default function Navbar() {
   return (
-    <nav className="sticky! top-0! z-50! bg-[#af0e2e]! w-full!">
+    <nav className="sticky! top-0! z-50! bg-[#62B6DF]! w-full!">
       <div className="max-w-[1710px]! mx-auto! px-4! sm:px-10!">
         <div className="flex! items-center! justify-between! py-4!">
           <motion.a
@@ -25,11 +25,11 @@ export default function Navbar() {
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
             <Image
-              src="/images/logo-white.svg"
-              alt="American University"
-              width={196}
-              height={50}
-              className="block!"
+              src="/alpine-logo.avif"
+              alt="Alpine Management College"
+              width={320}
+              height={100}
+              className="block! h-auto! w-auto! max-h-[90px]!"
               priority
             />
           </motion.a>

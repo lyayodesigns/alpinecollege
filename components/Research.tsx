@@ -103,7 +103,7 @@ export default function Research() {
           <div className="grid-two" style={{ paddingTop: "120px" }}>
             <motion.p
               className="section-paragraph white small"
-              style={{ color: "#000" }}
+              style={{ color: "#2B2B2B" }}
               initial={{ y: 100, opacity: 0 }}
               animate={isInView ? { y: 0, opacity: 1 } : {}}
               transition={{ duration: 0.8, delay: 0.2 }}

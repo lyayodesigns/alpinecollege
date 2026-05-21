@@ -173,10 +173,11 @@ export default function Footer() {
           {/* Logo */}
           <div className="footer-logo">
             <Image
-              src="/images/footer-logo.svg"
-              alt="American University"
-              width={196}
-              height={52}
+              src="/alpine-logo.avif"
+              alt="Alpine Management College"
+              width={320}
+              height={100}
+              className="h-auto w-auto max-h-[90px]"
             />
           </div>
 

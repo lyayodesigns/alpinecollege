@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="relative! bg-[#af0e2e]! w-full! pt-10! pb-0! overflow-hidden!">
+    <section className="relative! bg-[#62B6DF]! w-full! pt-10! pb-0! overflow-hidden!">
       <div className="max-w-[1710px]! mx-auto! px-4! sm:px-10! relative! z-10!">
         <div className="flex! flex-col! lg:flex-row! justify-between! items-end! relative!">
           
@@ -17,7 +17,7 @@ export default function Hero() {
               transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
               className="text-white! text-[80px]! sm:text-[100px]! lg:text-[160px]! leading-[0.85]! font-normal! tracking-tight! mb-8! font-['HelveticaNeue']!"
             >
-              AMERICAN<br />UNIVERSITY
+              ALPINE<br />COLLEGE
             </motion.h1>
             <motion.p
               initial={{ y: 150, opacity: 0 }}
@@ -39,7 +39,7 @@ export default function Hero() {
             >
               <Image
                 src="/images/banner.png"
-                alt="American University Campus"
+                alt="Alpine Management College Campus"
                 width={1680}
                 height={900}
                 className="w-full! h-auto! object-cover! rounded-tl-[120px]! sm:rounded-tl-[200px]!"
