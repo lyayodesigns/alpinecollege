@@ -48,7 +48,7 @@ export default function Testimonials() {
                 Testimonial
               </motion.p>
               <motion.h2
-                className="section-title"
+                className="section-title dark"
                 initial={{ y: 100, opacity: 0 }}
                 animate={isInView ? { y: 0, opacity: 1 } : {}}
                 transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
@@ -61,7 +61,10 @@ export default function Testimonials() {
           </div>
 
           {/* Right: testimonial columns */}
-          <div className="col" style={{ display: "flex", justifyContent: "flex-end" }}>
+          <div
+            className="col"
+            style={{ display: "flex", justifyContent: "flex-end" }}
+          >
             {/* Column 1 — slides from top */}
             <motion.div
               className="testimonial-wrap-div-one"
@@ -69,15 +72,21 @@ export default function Testimonials() {
               animate={isInView ? { y: 0 } : {}}
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
-              {/* Dark spacer */}
+              {/* Light spacer on white bg */}
               <div className="testimonial-single-item-wrap">
-                <div className="testimonial-single-item dark" />
+                <div className="testimonial-single-item spacer" />
               </div>
 
-              {/* White card */}
+              {/* Dark card */}
               <div className="testimonial-single-item-wrap">
-                <div className="testimonial-single-item">
-                  <p className="testimonial-author-quote">{testimonials[0].quote}</p>
+                <motion.div
+                  className="testimonial-single-item dark"
+                  whileHover={{ y: -8, boxShadow: "0 20px 40px rgba(32, 74, 101, 0.3)" }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <p className="testimonial-author-quote">
+                    {testimonials[0].quote}
+                  </p>
                   <div className="testimonial-author-meta">
                     <Image
                       src={testimonials[0].image}
@@ -87,11 +96,13 @@ export default function Testimonials() {
                       style={{ borderRadius: "50%" }}
                     />
                     <div className="testimonial-meta-content">
-                      <h4 className="testimonial-author-name">{testimonials[0].name}</h4>
+                      <h4 className="testimonial-author-name">
+                        {testimonials[0].name}
+                      </h4>
                       <p className="paragraph-3">{testimonials[0].role}</p>
                     </div>
                   </div>
-                </div>
+                </motion.div>
               </div>
             </motion.div>
 
@@ -104,7 +115,11 @@ export default function Testimonials() {
             >
               {testimonials.slice(1).map((t, i) => (
                 <div key={i} className="testimonial-single-item-wrap">
-                  <div className="testimonial-single-item">
+                  <motion.div
+                    className="testimonial-single-item dark"
+                    whileHover={{ y: -8, boxShadow: "0 20px 40px rgba(233, 132, 36, 0.3)" }}
+                    transition={{ duration: 0.3 }}
+                  >
                     <p className="testimonial-author-quote">{t.quote}</p>
                     <div className="testimonial-author-meta">
                       <Image
@@ -119,13 +134,13 @@ export default function Testimonials() {
                         <p className="paragraph-3">{t.role}</p>
                       </div>
                     </div>
-                  </div>
+                  </motion.div>
                 </div>
               ))}
 
-              {/* Dark spacer */}
+              {/* Light spacer on white bg */}
               <div className="testimonial-single-item-wrap">
-                <div className="testimonial-single-item dark" />
+                <div className="testimonial-single-item spacer" />
               </div>
             </motion.div>
           </div>

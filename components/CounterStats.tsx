@@ -69,8 +69,38 @@ export default function CounterStats() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section ref={ref} className="counter-area">
+    <section ref={ref} className="counter-area pb-30!">
       <div className="container">
+        <div className="section-cotent-wrap grid-item mb-100">
+          <div className="grid-one">
+            <motion.p
+              className="section-paragraph white"
+              initial={{ opacity: 0 }}
+              animate={isInView ? { opacity: 1 } : {}}
+              transition={{ duration: 0.6 }}
+            >
+              Our Impact
+            </motion.p>
+          </div>
+          <div className="grid-two">
+            <motion.h2
+              className="section-title"
+              initial={{ y: 200, opacity: 0 }}
+              animate={isInView ? { y: 0, opacity: 1 } : {}}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+            >
+              Numbers that define
+            </motion.h2>
+            <motion.h2
+              className="section-title"
+              initial={{ y: 200, opacity: 0 }}
+              animate={isInView ? { y: 0, opacity: 1 } : {}}
+              transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
+            >
+              our excellence
+            </motion.h2>
+          </div>
+        </div>
         <div className="counter-single-item-wrap">
           {stats.map((stat, index) => (
             <motion.div

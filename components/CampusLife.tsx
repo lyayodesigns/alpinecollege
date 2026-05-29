@@ -14,7 +14,7 @@ export default function CampusLife() {
         <div className="section-cotent-wrap grid-item">
           <div className="grid-one">
             <motion.p
-              className="section-paragraph white"
+              className="section-paragraph red"
               initial={{ y: 100, opacity: 0 }}
               animate={isInView ? { y: 0, opacity: 1 } : {}}
               transition={{ duration: 0.6 }}
@@ -37,7 +37,7 @@ export default function CampusLife() {
           </div>
           <div className="grid-two mb-100">
             <motion.h2
-              className="section-title"
+              className="section-title dark"
               initial={{ y: 100, opacity: 0 }}
               animate={isInView ? { y: 0, opacity: 1 } : {}}
               transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
@@ -45,7 +45,7 @@ export default function CampusLife() {
               University is the
             </motion.h2>
             <motion.h2
-              className="section-title"
+              className="section-title dark"
               initial={{ y: 100, opacity: 0 }}
               animate={isInView ? { y: 0, opacity: 1 } : {}}
               transition={{ duration: 0.8, delay: 0.15, ease: "easeOut" }}
@@ -53,7 +53,7 @@ export default function CampusLife() {
               best time of your
             </motion.h2>
             <motion.h2
-              className="section-title mb-30"
+              className="section-title dark mb-30"
               initial={{ y: 100, opacity: 0 }}
               animate={isInView ? { y: 0, opacity: 1 } : {}}
               transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
@@ -61,7 +61,7 @@ export default function CampusLife() {
               life.
             </motion.h2>
             <motion.p
-              className="section-paragraph white small"
+              className="section-paragraph dark small"
               initial={{ y: 150, opacity: 0 }}
               animate={isInView ? { y: 0, opacity: 1 } : {}}
               transition={{ duration: 0.8, delay: 0.3 }}

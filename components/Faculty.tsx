@@ -29,7 +29,7 @@ export default function Faculty() {
         <div className="section-cotent-wrap grid-item mb-100">
           <div className="grid-one">
             <motion.p
-              className="section-paragraph white"
+              className="section-paragraph red"
               initial={{ x: -150, opacity: 0 }}
               animate={isInView ? { x: 0, opacity: 1 } : {}}
               transition={{ duration: 0.6 }}
@@ -39,7 +39,7 @@ export default function Faculty() {
           </div>
           <div className="grid-two">
             <motion.h2
-              className="section-title"
+              className="section-title dark"
               initial={{ y: 100, opacity: 0 }}
               animate={isInView ? { y: 0, opacity: 1 } : {}}
               transition={{ duration: 0.8, ease: "easeOut" }}
@@ -47,7 +47,7 @@ export default function Faculty() {
               Our skilled faculty
             </motion.h2>
             <motion.h2
-              className="section-title"
+              className="section-title dark"
               initial={{ y: 100, opacity: 0 }}
               animate={isInView ? { y: 0, opacity: 1 } : {}}
               transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
@@ -55,7 +55,7 @@ export default function Faculty() {
               helps students in
             </motion.h2>
             <motion.h2
-              className="section-title"
+              className="section-title dark"
               initial={{ y: 100, opacity: 0 }}
               animate={isInView ? { y: 0, opacity: 1 } : {}}
               transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
@@ -68,6 +68,7 @@ export default function Faculty() {
         <div className="faculty-grid">
           <div className="grid-one">
             <motion.div
+              className="faculty-image-wrap"
               initial={{ x: 200, opacity: 0 }}
               animate={isInView ? { x: 0, opacity: 1 } : {}}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -114,6 +115,7 @@ export default function Faculty() {
           </div>
           <div className="grid-one text-right">
             <motion.div
+              className="faculty-image-wrap"
               initial={{ x: -200, opacity: 0 }}
               animate={isInView ? { x: 0, opacity: 1 } : {}}
               transition={{ duration: 0.6, delay: 0.5 }}
@@ -135,7 +137,7 @@ export default function Faculty() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.6 }}
         >
-          <a href="#" className="primary-button m-top-55 group">
+          <a href="#" className="primary-button on-light m-top-55 group">
             <div className="ripple-div scale-0 group-hover:scale-100 transition-transform duration-500"></div>
             <div className="button-content relative z-10">
               <div className="primary-button-text">See All Faculty</div>

@@ -14,29 +14,29 @@ const programsByTab: Record<string, { title: string; category: string; image: st
   bachelor: [
     {
       title: "CSE & Environmental Engineering Department",
-      category: "/Bachelor",
+      category: "Bachelor",
       image: "/images/classroom.png",
     },
     {
       title: "Civil & Environmental Engineering Department",
-      category: "/Bachelor",
+      category: "Bachelor",
       image: "/images/campus.png",
     },
     {
       title: "Materials Science & Engineering Department",
-      category: "/Bachelor",
+      category: "Bachelor",
       image: "/images/library.png",
     },
   ],
   masters: [
     {
       title: "Master of Business Administration",
-      category: "/Masters",
+      category: "Masters",
       image: "/images/convocation.png",
     },
     {
       title: "Master of Computer Science",
-      category: "/Masters",
+      category: "Masters",
       image: "/images/classroom.png",
     },
     {
@@ -48,17 +48,17 @@ const programsByTab: Record<string, { title: string; category: string; image: st
   phd: [
     {
       title: "PhD in Environmental Sciences",
-      category: "/PhD",
+      category: "PhD",
       image: "/images/research1.png",
     },
     {
       title: "PhD in Computer Science & AI",
-      category: "/PhD",
+      category: "PhD",
       image: "/images/research2.png",
     },
     {
       title: "PhD in Materials Engineering",
-      category: "/PhD",
+      category: "PhD",
       image: "/images/research3.png",
     },
   ],
@@ -76,7 +76,7 @@ export default function AcademicPrograms() {
       <div className="container">
         <div className="section-cotent-wrap">
           <motion.h2
-            className="section-title dark mb-30"
+            className="section-title mb-30"
             initial={{ opacity: 0, y: 50 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6 }}
@@ -84,7 +84,7 @@ export default function AcademicPrograms() {
             Academic Programs
           </motion.h2>
           <motion.p
-            className="banner-paragraph dark"
+            className="section-paragraph white small"
             initial={{ y: 50, opacity: 0 }}
             animate={isInView ? { y: 0, opacity: 1 } : {}}
             transition={{ duration: 0.6, delay: 0.1 }}
@@ -130,24 +130,22 @@ export default function AcademicPrograms() {
                   src={program.image}
                   alt={program.title}
                   fill
-                  style={{ objectFit: "cover", opacity: 0.15, borderRadius: "20px", zIndex: -1 }}
+                  className="tab-card-bg-image"
                 />
-                <div className="ripple-div-two scale-0 group-hover:scale-100 transition-transform duration-500"></div>
                 <div className="tab-content relative z-10 w-full">
-                  <h3 className="tab-content-title group-hover:text-white transition-colors duration-300">
+                  <h3 className="tab-content-title">
                     {program.title}
                   </h3>
                   <div className="tab-bottom-content">
-                    <a href="#" className="category-button group-hover:border-white group-hover:text-white transition-colors duration-300">
+                    <span className="category-button">
                       {program.category}
-                    </a>
-                    <div className="tab-icon group-hover:border-white transition-colors duration-300">
+                    </span>
+                    <div className="tab-icon">
                       <Image
                         src="/images/arrow-right-dark.svg"
                         alt="Arrow"
                         width={24}
                         height={24}
-                        className="group-hover:invert transition-all duration-300"
                       />
                     </div>
                   </div>
