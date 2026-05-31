@@ -7,15 +7,15 @@ import { useRef } from "react";
 const facultyItems = [
   {
     image: "/images/faculty1.jpg",
-    category: "Bachelor",
-    title: "Faculty of Earth and Environmental Sciences",
-    description: "At present, there are five departments within the Faculty: Department of Geography and Environment, Geology, Oceanography, Disaster Science and Climate Resilience and Meteorology.",
+    category: "BBA",
+    title: "Faculty of Business Administration",
+    description: "Our dedicated, highly qualified faculty bring real-world business expertise to the classroom, guiding BBA students through management, finance, marketing, and entrepreneurship.",
   },
   {
     image: "/images/faculty2.png",
-    category: "Bachelor",
-    title: "Faculty of Engineering and Technology",
-    description: "At present, there are five departments within the Faculty: Department of Geography and Environment, Geology, Oceanography, Disaster Science and Climate Resilience and Meteorology.",
+    category: "BHM",
+    title: "Faculty of Hotel Management",
+    description: "Expert hospitality professionals and industry veterans mentor BHM students, preparing them for careers in top national and international hotels across Thailand, Dubai, Bahrain, and beyond.",
   },
 ];
 
@@ -44,7 +44,7 @@ export default function Faculty() {
               animate={isInView ? { y: 0, opacity: 1 } : {}}
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
-              Our skilled faculty
+              Dedicated faculty,
             </motion.h2>
             <motion.h2
               className="section-title dark"
@@ -52,7 +52,7 @@ export default function Faculty() {
               animate={isInView ? { y: 0, opacity: 1 } : {}}
               transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
             >
-              helps students in
+              real-world
             </motion.h2>
             <motion.h2
               className="section-title dark"
@@ -60,7 +60,7 @@ export default function Faculty() {
               animate={isInView ? { y: 0, opacity: 1 } : {}}
               transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
             >
-              many disciplines
+              expertise
             </motion.h2>
           </div>
         </div>

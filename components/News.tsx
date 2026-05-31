@@ -6,24 +6,24 @@ import { useRef, useState } from "react";
 
 const newsItems = [
   {
-    category: "/Bachelor",
-    title: "Wildfire Smoke Exposure Hurts Learning Outcomes",
+    category: "/BBA",
+    title: "AMC Students Secure Top Positions in Pokhara University Examinations",
   },
   {
-    category: "/Bachelor",
-    title: "University Class Of 2023 Called To Explore And Engage",
+    category: "/BHM",
+    title: "BHM Graduates Land Internships at Five-Star Hotels in Thailand & Dubai",
   },
   {
-    category: "/Bachelor",
-    title: "Battery Technology Research At Alpine Management College",
+    category: "/Scholarship",
+    title: "AMC Announces Scholarship for Province & District Toppers — 2025 Admissions",
   },
   {
-    category: "/Bachelor",
-    title: "Wildfire Smoke Exposure Hurts Learning Outcomes",
+    category: "/Events",
+    title: "Annual Personality Development Workshop Draws Industry Leaders to AMC Campus",
   },
   {
-    category: "/Bachelor",
-    title: "Wildfire Smoke Exposure Hurts Learning Outcomes",
+    category: "/Admissions",
+    title: "Enrollment Now Open for BBA & BHM — Limited Seats Available",
   },
 ];
 
@@ -92,13 +92,12 @@ export default function News() {
           <div className="grid-two" style={{ paddingTop: "120px" }}>
             <motion.p
               className="section-paragraph white small"
-              style={{ color: "#2B2B2B" }}
+              style={{ color: "var(--color-deep-midnight)" }}
               initial={{ y: 100, opacity: 0 }}
               animate={isInView ? { y: 0, opacity: 1 } : {}}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              Explore University&apos;s 10+ courses across various specialisations that
-              provoke intellectual and intuitive learning among students.
+              Stay up to date with the latest achievements, events, and announcements from Alpine Management College, Nepalgunj.
             </motion.p>
           </div>
         </div>

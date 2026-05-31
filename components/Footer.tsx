@@ -6,33 +6,33 @@ import { useRef } from "react";
 
 const footerLinks = {
   about: [
-    { name: "Facts", href: "#" },
+    { name: "About AMC", href: "#" },
     { name: "History", href: "#" },
-    { name: "Contact", href: "#" },
-    { name: "Management", href: "#" },
+    { name: "Contact Us", href: "#" },
+    { name: "Management Team", href: "#" },
   ],
   faculty: [
-    { name: "Business", href: "#" },
-    { name: "Engineering", href: "#" },
-    { name: "Law", href: "#" },
-    { name: "Science", href: "#" },
+    { name: "BBA Faculty", href: "#" },
+    { name: "BHM Faculty", href: "#" },
+    { name: "Guest Lecturers", href: "#" },
+    { name: "Staff", href: "#" },
   ],
   aboutTwo: [
-    { name: "Business", href: "#" },
-    { name: "Engineering", href: "#" },
-    { name: "Law", href: "#" },
-    { name: "Humanities", href: "#" },
+    { name: "Library", href: "#" },
+    { name: "Computer Lab", href: "#" },
+    { name: "Canteen", href: "#" },
+    { name: "Counseling", href: "#" },
   ],
   department: [
-    { name: "Undergraduate", href: "#" },
-    { name: "Graduate", href: "#" },
-    { name: "Financial Aid", href: "#" },
-    { name: "Phd", href: "#" },
+    { name: "BBA Program", href: "#" },
+    { name: "BHM Program", href: "#" },
+    { name: "Internship", href: "#" },
+    { name: "Scholarship", href: "#" },
   ],
   updates: [
-    { name: "Notice", href: "#" },
-    { name: "Notice", href: "#" },
-    { name: "Login", href: "#" },
+    { name: "Notices", href: "#" },
+    { name: "Events", href: "#" },
+    { name: "Results", href: "#" },
     { name: "Alumni", href: "#" },
   ],
 };
@@ -81,13 +81,13 @@ export default function Footer() {
             </nav>
           </motion.div>
 
-          {/* About (duplicate in original) */}
+          {/* Facilities */}
           <motion.div
             initial={{ y: 150, opacity: 0 }}
             animate={isInView ? { y: 0, opacity: 1 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <h3 className="footer-menu-title">About</h3>
+            <h3 className="footer-menu-title">Facilities</h3>
             <nav className="nav mod--footer">
               {footerLinks.aboutTwo.map((link, index) => (
                 <a key={index} href={link.href} className="nav-ink anim-scroll-up">
@@ -143,9 +143,9 @@ export default function Footer() {
             className="flex flex-col gap-5"
           >
             {[
-              { text: "APPLYING" },
+              { text: "APPLY NOW" },
               { text: "SCHOLARSHIP" },
-              { text: "CAREER" },
+              { text: "INTERNSHIP" },
             ].map((item, index) => (
               <a
                 key={index}
@@ -183,7 +183,7 @@ export default function Footer() {
 
           {/* Copyright text */}
           <p className="copyright-text">
-            Copyright © 2022 Musemind &nbsp;|&nbsp; All Rights Reserved &nbsp;|&nbsp; Privacy &amp; Policy
+            Copyright © 2025 Alpine Management College &nbsp;|&nbsp; All Rights Reserved &nbsp;|&nbsp; Affiliated to Pokhara University
           </p>
 
           {/* Social links */}

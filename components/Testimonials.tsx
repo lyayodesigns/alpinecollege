@@ -7,23 +7,23 @@ import { useRef } from "react";
 const testimonials = [
   {
     quote:
-      "At present, there are five departments within the Faculty: Department of Geography And Environment.",
-    name: "Guy Hawkins",
-    role: "Student",
+      "AMC gave me not just a degree but the confidence and skills to face the real world. The faculty’s guidance and the internship experience were truly life-changing.",
+    name: "Sanjay Thapa",
+    role: "BBA Graduate",
     image: "/images/testimonial1.png",
   },
   {
     quote:
-      "At present, there are five departments within the Faculty: Department of Geography And Environment.",
-    name: "Wade Warren",
-    role: "Student",
+      "My internship in Dubai through AMC’s BHM program opened doors I never imagined. The college’s industry connections and dedicated mentors made all the difference.",
+    name: "Priya Sharma",
+    role: "BHM Graduate",
     image: "/images/testimonial2.png",
   },
   {
     quote:
-      "At present, there are five departments within the Faculty: Department of Geography And Environment.",
-    name: "Wade Warren",
-    role: "Student",
+      "The scholarship, the Wi-Fi-enabled classrooms, and the extra-curricular activities at AMC create the perfect environment to grow both academically and personally.",
+    name: "Anil KC",
+    role: "BBA Student",
     image: "/images/testimonial2.png",
   },
 ];
@@ -81,7 +81,7 @@ export default function Testimonials() {
               <div className="testimonial-single-item-wrap">
                 <motion.div
                   className="testimonial-single-item dark"
-                  whileHover={{ y: -8, boxShadow: "0 20px 40px rgba(32, 74, 101, 0.3)" }}
+                  whileHover={{ y: -8, boxShadow: "0 20px 40px rgba(var(--color-deep-midnight-rgb), 0.3)" }}
                   transition={{ duration: 0.3 }}
                 >
                   <p className="testimonial-author-quote">
@@ -117,7 +117,7 @@ export default function Testimonials() {
                 <div key={i} className="testimonial-single-item-wrap">
                   <motion.div
                     className="testimonial-single-item dark"
-                    whileHover={{ y: -8, boxShadow: "0 20px 40px rgba(233, 132, 36, 0.3)" }}
+                    whileHover={{ y: -8, boxShadow: "0 20px 40px rgba(var(--color-summit-orange-rgb), 0.3)" }}
                     transition={{ duration: 0.3 }}
                   >
                     <p className="testimonial-author-quote">{t.quote}</p>

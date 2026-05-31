@@ -16,10 +16,10 @@ export default function Home() {
     <main>
       <Navbar />
       <Hero />
+      <CounterStats />
       <About />
       <AcademicPrograms />
       <Faculty />
-      <CounterStats />
       <CampusLife />
       <Research />
       <Testimonials />

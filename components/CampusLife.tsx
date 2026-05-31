@@ -42,7 +42,7 @@ export default function CampusLife() {
               animate={isInView ? { y: 0, opacity: 1 } : {}}
               transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
             >
-              University is the
+              Beyond the
             </motion.h2>
             <motion.h2
               className="section-title dark"
@@ -50,7 +50,7 @@ export default function CampusLife() {
               animate={isInView ? { y: 0, opacity: 1 } : {}}
               transition={{ duration: 0.8, delay: 0.15, ease: "easeOut" }}
             >
-              best time of your
+              classroom.
             </motion.h2>
             <motion.h2
               className="section-title dark mb-30"
@@ -58,7 +58,7 @@ export default function CampusLife() {
               animate={isInView ? { y: 0, opacity: 1 } : {}}
               transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
             >
-              life.
+              &nbsp;
             </motion.h2>
             <motion.p
               className="section-paragraph dark small"
@@ -66,7 +66,7 @@ export default function CampusLife() {
               animate={isInView ? { y: 0, opacity: 1 } : {}}
               transition={{ duration: 0.8, delay: 0.3 }}
             >
-              Explore University&apos;s 10+ courses across various specialisations that provoke intellectual and intuitive learning among students.
+              AMC nurtures multifaceted personalities through sports, quiz competitions, seminars, workshops, industrial tours, and cultural activities — building competent, self-confident professionals.
             </motion.p>
           </div>
         </div>

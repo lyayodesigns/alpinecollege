@@ -4,13 +4,6 @@ import { motion, useInView } from "framer-motion";
 import Image from "next/image";
 import { useRef } from "react";
 
-const aboutImages = [
-  { src: "/images/classroom.png", title: "Classroom", anim: { x: 0, y: 0 } },
-  { src: "/images/campus.png", title: "Campus", anim: { x: 100, y: 0 } },
-  { src: "/images/convocation.png", title: "Convocation", anim: { x: -100, y: 0 } },
-  { src: "/images/library.png", title: "Library", anim: { x: 0, y: 0 } },
-];
-
 export default function About() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
@@ -23,63 +16,63 @@ export default function About() {
           alt=""
           width={200}
           height={200}
+          style={{ width: 'auto' }}
         />
       </div>
       <div className="container">
-        <div className="section-cotent-wrap grid-item mb-100">
-          <div className="grid-one">
+        <div className="about-two-col">
+          {/* Left: Text */}
+          <div className="about-text-col">
             <motion.p
-              className="section-paragraph white"
+              className="section-paragraph"
               initial={{ opacity: 0 }}
               animate={isInView ? { opacity: 1 } : {}}
               transition={{ duration: 0.6 }}
             >
-              About University
+              About AMC
+            </motion.p>
+            <motion.h2
+              className="about-heading"
+              initial={{ y: 60, opacity: 0 }}
+              animate={isInView ? { y: 0, opacity: 1 } : {}}
+              transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
+            >
+              Empowering the Next Generation of Leaders
+            </motion.h2>
+            <motion.p
+              className="about-body normal-case"
+              initial={{ opacity: 0, y: 30 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.7, delay: 0.25 }}
+            >
+              Established in 2009, Alpine Management College (AMC) is strategically located in the rapidly growing industrial city of Nepalgunj, Banke district, within Lumbini Province. We recognized the region&apos;s immense potential and the critical need for skilled professionals, leading us to become the pioneering institution for modern management studies in the area.
+            </motion.p>
+            <motion.p
+              className="about-body normal-case"
+              initial={{ opacity: 0, y: 30 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.7, delay: 0.4 }}
+            >
+              As a proud affiliate of Pokhara University, we offer globally recognized degrees that bridge the gap between theoretical knowledge and practical application. AMC is widely regarded as one of the best management colleges in Nepalgunj because we focus on holistic student development. We do not just teach; we mentor, guide, and prepare you to confidently navigate the competitive era of the 21st century.
             </motion.p>
           </div>
-          <div className="grid-two">
-            <motion.h2
-              className="section-title"
-              initial={{ y: 200, opacity: 0 }}
-              animate={isInView ? { y: 0, opacity: 1 } : {}}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-            >
-              Education is not <br />preparation for life; <br />education is life itself
-            </motion.h2>
-          </div>
-        </div>
-        <div className="uv-single-item-wrap">
-          <div className="uv-single-item d-none"></div>
-          {aboutImages.map((item, index) => (
-            <motion.div
-              key={index}
-              className="uv-single-item"
-              initial={{ opacity: 0, x: item.anim.x, y: item.anim.y }}
-              animate={isInView ? { opacity: 1, x: 0, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.1 * (index + 1) }}
-            >
-              <div className="uv-thumbnail-wrap">
-                <Image
-                  src={item.src}
-                  alt={item.title}
-                  width={500}
-                  height={600}
-                  className="w-full h-auto"
-                />
-                <h3 className="uv-thumbnail-title">{item.title}</h3>
-              </div>
-            </motion.div>
-          ))}
-          <div className="uv-single-item d-none">
-            <div className="uv-thumbnail-wrap">
-              <Image
-                src="/images/frame.png"
-                alt=""
-                width={200}
-                height={200}
-              />
-            </div>
-          </div>
+
+          {/* Right: Image */}
+          <motion.div
+            className="about-image-col"
+            initial={{ opacity: 0, x: 60 }}
+            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.9, delay: 0.2, ease: "easeOut" }}
+          >
+            <Image
+              src="/images/campus.png"
+              alt="Alpine Management College Campus"
+              width={700}
+              height={560}
+              className="about-campus-img"
+              style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+            />
+          </motion.div>
         </div>
       </div>
     </section>

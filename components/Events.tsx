@@ -5,50 +5,50 @@ import Image from "next/image";
 import { useRef, useState } from "react";
 
 const eventTabs = [
-  { id: "arts", label: "/Arts" },
-  { id: "culture", label: "Culture" },
-  { id: "exhibition", label: "Exhibition" },
-  { id: "seminar", label: "Seminar" },
+  { id: "seminar", label: "/Seminar" },
   { id: "sports", label: "Sports" },
-  { id: "recreation", label: "Recreation" },
-  { id: "healthcare", label: "Health Care" },
+  { id: "industrial", label: "Industrial Tour" },
+  { id: "workshop", label: "Workshop" },
+  { id: "cultural", label: "Cultural" },
+  { id: "quiz", label: "Quiz" },
+  { id: "internship", label: "Internship" },
 ];
 
 const eventItems = [
   {
-    date: "OCT 20, 2022",
-    category: "Bachelor",
-    title: "The Middle East In The Twentieth Century",
+    date: "MAR 15, 2025",
+    category: "Seminar",
+    title: "Entrepreneurship & Startup Culture in Lumbini Province",
     description:
-      "American Journal Of Applied Scientific Research (AJASR) Is A Peer-Reviewed, Open Access International Journal, Published By Science Publishing Group.",
+      "A special seminar featuring renowned industrialists and distinguished business professionals sharing insights on opportunities in Nepal’s growing economy.",
   },
   {
-    date: "OCT 20, 2022",
-    category: "Bachelor",
-    title: "The Middle East In The Twentieth Century",
+    date: "APR 5, 2025",
+    category: "Industrial Tour",
+    title: "Industrial Field Visit — Butwal & Bhairahawa Manufacturing Units",
     description:
-      "American Journal Of Applied Scientific Research (AJASR) Is A Peer-Reviewed, Open Access International Journal, Published By Science Publishing Group.",
+      "BBA students explore real-world operations at leading industrial units, applying classroom concepts to live business environments.",
   },
   {
-    date: "OCT 20, 2022",
-    category: "Bachelor",
-    title: "The Middle East In The Twentieth Century",
+    date: "APR 22, 2025",
+    category: "Sports",
+    title: "AMC Inter-Semester Sports Tournament 2025",
     description:
-      "American Journal Of Applied Scientific Research (AJASR) Is A Peer-Reviewed, Open Access International Journal, Published By Science Publishing Group.",
+      "Annual sports competition fostering teamwork, discipline, and sportsmanship among BBA and BHM students across all semesters.",
   },
   {
-    date: "OCT 20, 2022",
-    category: "Bachelor",
-    title: "The Middle East In The Twentieth Century",
+    date: "MAY 10, 2025",
+    category: "Workshop",
+    title: "Personality Development & Career Readiness Workshop",
     description:
-      "American Journal Of Applied Scientific Research (AJASR) Is A Peer-Reviewed, Open Access International Journal, Published By Science Publishing Group.",
+      "Comprehensive workshop on communication skills, resume building, interview preparation, and professional etiquette led by industry experts.",
   },
 ];
 
 export default function Events() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
-  const [activeTab, setActiveTab] = useState("arts");
+  const [activeTab, setActiveTab] = useState("seminar");
 
   return (
     <section ref={ref} className="event-area">

@@ -1,0 +1,80 @@
+/* ============================================================
+   ALPINE MANAGEMENT COLLEGE — BRAND PALETTE
+   v2.0 | Extracted from logo visual identity
+   ============================================================
+   To swap the entire colour scheme, edit ONLY this file.
+   All other stylesheets consume these tokens via var().
+   ============================================================
+
+   PRIMARY COLOURS
+   ─────────────────────────────────────────────────────────
+   Alpine Blue    #2E8FBF   Brand anchor · headers · nav
+   Summit Orange  #F07A20   Accent · CTAs · borders
+   Deep Midnight  #1A1A2E   Body text · headings · UI labels
+
+   SECONDARY COLOURS
+   ─────────────────────────────────────────────────────────
+   Snow White     #F5F0E8   Backgrounds · cards
+   Rock Grey      #8C8A85   Subtext · dividers
+   Sky Mist       #A8C8D8   Hover states · tints · info panels
+   ============================================================ */
+
+:root {
+  /* ── Primary Brand Colours ── */
+  --color-alpine-blue:    #2E8FBF;
+  --color-summit-orange:  #F07A20;
+  --color-deep-midnight:  #1A1A2E;
+
+  /* ── Secondary Colours ── */
+  --color-snow-white:     #F5F0E8;
+  --color-rock-grey:      #8C8A85;
+  --color-sky-mist:       #A8C8D8;
+
+  /* ── Pure White (utility) ── */
+  --color-white:          #FFFFFF;
+
+  /* ── RGB channel values (for rgba() usage) ── */
+  --color-alpine-blue-rgb:   46, 143, 191;
+  --color-summit-orange-rgb: 240, 122, 32;
+  --color-deep-midnight-rgb: 26, 26, 46;
+  --color-sky-mist-rgb:      168, 200, 216;
+  --color-rock-grey-rgb:     140, 138, 133;
+
+  /* ── Alpine Blue tint scale ── */
+  --color-alpine-blue-50:  #EAF4FA;
+  --color-alpine-blue-100: #C4E1F1;
+  --color-alpine-blue-200: #9DCDE7;
+  --color-alpine-blue-300: #76BADD;
+  --color-alpine-blue-400: #52A7D3;
+  --color-alpine-blue-500: #2E8FBF;   /* base */
+  --color-alpine-blue-600: #256F96;
+  --color-alpine-blue-700: #1B506D;
+
+  /* ── Summit Orange tint scale ── */
+  --color-summit-orange-50:  #FEF2E9;
+  --color-summit-orange-100: #FBD9BE;
+  --color-summit-orange-200: #F8C093;
+  --color-summit-orange-300: #F5A768;
+  --color-summit-orange-400: #F28E3D;
+  --color-summit-orange-500: #F07A20;   /* base */
+  --color-summit-orange-600: #C06018;
+  --color-summit-orange-700: #904710;
+
+  /* ── Deep Midnight tint scale ── */
+  --color-deep-midnight-50:  #EAEAEF;
+  --color-deep-midnight-100: #C0C0CF;
+  --color-deep-midnight-200: #9696AF;
+  --color-deep-midnight-300: #6C6C8F;
+  --color-deep-midnight-400: #42426F;
+  --color-deep-midnight-500: #1A1A2E;   /* base */
+  --color-deep-midnight-600: #141425;
+  --color-deep-midnight-700: #0E0E1C;
+
+  /* ── Sky Mist tint scale ── */
+  --color-sky-mist-50:  #F0F7FA;
+  --color-sky-mist-100: #D6EBF3;
+  --color-sky-mist-200: #BCDFEC;
+  --color-sky-mist-300: #A8C8D8;   /* base */
+  --color-sky-mist-400: #85B3C8;
+  --color-sky-mist-500: #619DB8;
+}

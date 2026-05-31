@@ -7,27 +7,27 @@ import { useRef, useState } from "react";
 const researchItems = [
   {
     image: "/images/research1.png",
-    title: "Are Social Networks Good For Our Society?",
+    title: "Library & Resource Center",
     description:
-      "American Journal Of Applied Scientific Research (AJASR) Is A Peer-Reviewed, Open Access International Journal, Published By Science Publishing Group.",
+      "A wide collection of course books, reference books, bulletins, national & international journals, periodicals, and daily newspapers. A spacious reading room available during leisure periods.",
   },
   {
     image: "/images/research2.png",
-    title: "How To Stop Wasting Paper And Save Trees?",
+    title: "Computer Lab",
     description:
-      "American Journal Of Applied Scientific Research (AJASR) Is A Peer-Reviewed, Open Access International Journal, Published By Science Publishing Group.",
+      "Air-conditioned computer lab equipped with the latest high-tech computers, high-speed internet, and campus-wide Wi-Fi — giving students seamless access to the world.",
   },
   {
     image: "/images/research3.png",
-    title: "Are Social Networks Good For Our Society?",
+    title: "Student Counseling",
     description:
-      "American Journal Of Applied Scientific Research (AJASR) Is A Peer-Reviewed, Open Access International Journal, Published By Science Publishing Group.",
+      "Individual counseling for students and guardians covering academic support, career development, further studies within Nepal and abroad, and personal guidance.",
   },
   {
     image: "/images/research1.png",
-    title: "Are Social Networks Good For Our Society?",
+    title: "Rooftop Canteen",
     description:
-      "American Journal Of Applied Scientific Research (AJASR) Is A Peer-Reviewed, Open Access International Journal, Published By Science Publishing Group.",
+      "A welcoming rooftop canteen offering healthy, hygienic meals, snacks, cold drinks, and daily essentials at affordable prices for the AMC community.",
   },
 ];
 
@@ -89,7 +89,7 @@ export default function Research() {
               animate={isInView ? { x: 0, opacity: 1 } : {}}
               transition={{ duration: 0.6 }}
             >
-              Research
+              Campus
             </motion.p>
           </div>
           <div className="grid-two">
@@ -99,7 +99,7 @@ export default function Research() {
               animate={isInView ? { y: 0, opacity: 1 } : {}}
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
-              Publication &amp;
+              Facilities built
             </motion.h2>
             <motion.h2
               className="section-title"
@@ -107,7 +107,7 @@ export default function Research() {
               animate={isInView ? { y: 0, opacity: 1 } : {}}
               transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
             >
-              scholarly insights
+              for student
             </motion.h2>
             <motion.h2
               className="section-title mb-30"
@@ -115,7 +115,7 @@ export default function Research() {
               animate={isInView ? { y: 0, opacity: 1 } : {}}
               transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
             >
-              that matter
+              success
             </motion.h2>
             <motion.p
               className="section-paragraph white small"
@@ -123,9 +123,7 @@ export default function Research() {
               animate={isInView ? { y: 0, opacity: 1 } : {}}
               transition={{ duration: 0.8, delay: 0.3 }}
             >
-              Explore University&apos;s 10+ courses across various
-              specialisations that provoke intellectual and intuitive learning
-              among students.
+              From a fully-stocked library and air-conditioned computer lab to a rooftop canteen and dedicated counseling services, AMC provides everything students need to thrive.
             </motion.p>
           </div>
         </div>
@@ -198,7 +196,7 @@ export default function Research() {
           <a href="#" className="primary-button on-light m-top-55 group">
             <div className="ripple-div scale-0 group-hover:scale-100 transition-transform duration-500"></div>
             <div className="button-content relative z-10">
-              <div className="primary-button-text">Browse All Research</div>
+              <div className="primary-button-text">Explore Campus Life</div>
               <Image
                 src="/images/icon.svg"
                 alt="Arrow"

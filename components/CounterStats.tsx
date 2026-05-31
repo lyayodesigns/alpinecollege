@@ -5,22 +5,22 @@ import { useRef, useEffect, useState } from "react";
 
 const stats = [
   {
+    number: 15,
+    suffix: "+",
+    title: "Years of Excellence",
+    description: "Established in 2009, AMC has been the pioneer management college in the Nepalgunj region for over 15 years.",
+  },
+  {
+    number: 2,
+    suffix: "",
+    title: "Degree Programs",
+    description: "BBA (since 2009) and BHM (since 2017) — both affiliated to Pokhara University and the first of their kind in the region.",
+  },
+  {
     number: 10,
-    suffix: "k",
-    title: "Students",
-    description: "At present, there are five departments within the Faculty: Department of Geography and Environment.",
-  },
-  {
-    number: 300,
-    suffix: "",
-    title: "Professors",
-    description: "At present, there are five departments within the Faculty: Department of Geography and Environment.",
-  },
-  {
-    number: 7,
-    suffix: "",
-    title: "Faculty",
-    description: "At present, there are five departments within the Faculty: Department of Geography and Environment.",
+    suffix: "%",
+    title: "Scholarship",
+    description: "Pokhara University provides scholarship to 10% of total students, with additional college scholarships for toppers and deserving students.",
   },
 ];
 
@@ -89,7 +89,7 @@ export default function CounterStats() {
               animate={isInView ? { y: 0, opacity: 1 } : {}}
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
-              Numbers that define
+              Numbers that speak
             </motion.h2>
             <motion.h2
               className="section-title"
@@ -97,7 +97,7 @@ export default function CounterStats() {
               animate={isInView ? { y: 0, opacity: 1 } : {}}
               transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
             >
-              our excellence
+              for themselves
             </motion.h2>
           </div>
         </div>
