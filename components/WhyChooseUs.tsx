@@ -76,7 +76,7 @@ const features = [
   },
 ];
 
-export default function CampusLife() {
+export default function WhyChooseUs() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 

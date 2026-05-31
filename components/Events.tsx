@@ -2,53 +2,34 @@
 
 import { motion, useInView } from "framer-motion";
 import Image from "next/image";
-import { useRef, useState } from "react";
+import { useRef } from "react";
 
-const eventTabs = [
-  { id: "seminar", label: "/Seminar" },
-  { id: "sports", label: "Sports" },
-  { id: "industrial", label: "Industrial Tour" },
-  { id: "workshop", label: "Workshop" },
-  { id: "cultural", label: "Cultural" },
-  { id: "quiz", label: "Quiz" },
-  { id: "internship", label: "Internship" },
-];
-
-const eventItems = [
+const supportItems = [
   {
-    date: "MAR 15, 2025",
-    category: "Seminar",
-    title: "Entrepreneurship & Startup Culture in Lumbini Province",
+    title: "Pokhara University Scholarships",
     description:
-      "A special seminar featuring renowned industrialists and distinguished business professionals sharing insights on opportunities in Nepal’s growing economy.",
+      "The university provides full scholarships to 10% of our total student body, covering 10 students in the BBA program and 5 students in the BHM program for all four academic years.",
   },
   {
-    date: "APR 5, 2025",
-    category: "Industrial Tour",
-    title: "Industrial Field Visit — Butwal & Bhairahawa Manufacturing Units",
+    title: "Merit-Based Institutional Scholarships",
     description:
-      "BBA students explore real-world operations at leading industrial units, applying classroom concepts to live business environments.",
+      "AMC provides significant admission fee waivers to provincial toppers and district toppers in management, science, and humanities.",
   },
   {
-    date: "APR 22, 2025",
-    category: "Sports",
-    title: "AMC Inter-Semester Sports Tournament 2025",
+    title: "Entrance and Semester Topper Awards",
     description:
-      "Annual sports competition fostering teamwork, discipline, and sportsmanship among BBA and BHM students across all semesters.",
+      "We offer special scholarships for the entrance exam topper and second topper, as well as a half-tuition free-ship to the top-performing student in every single semester.",
   },
   {
-    date: "MAY 10, 2025",
-    category: "Workshop",
-    title: "Personality Development & Career Readiness Workshop",
+    title: "Comprehensive Counseling",
     description:
-      "Comprehensive workshop on communication skills, resume building, interview preparation, and professional etiquette led by industry experts.",
+      "We offer individual counseling to students and guardians requiring personal advice. We also provide robust career counseling, personality development classes, and guidance for further studies abroad or immediate job placements.",
   },
 ];
 
 export default function Events() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
-  const [activeTab, setActiveTab] = useState("seminar");
 
   return (
     <section ref={ref} className="event-area">
@@ -72,7 +53,7 @@ export default function Events() {
               animate={isInView ? { x: 0, opacity: 1 } : {}}
               transition={{ duration: 0.6 }}
             >
-              Events
+              Student Support
             </motion.p>
           </div>
           <div className="grid-two mb-100">
@@ -82,7 +63,7 @@ export default function Events() {
               animate={isInView ? { y: 0, opacity: 1 } : {}}
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
-              Recent And
+              Financial Aid And
             </motion.h2>
             <motion.h2
               className="section-title dark"
@@ -90,60 +71,48 @@ export default function Events() {
               animate={isInView ? { y: 0, opacity: 1 } : {}}
               transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
             >
-              Upcoming Events
+              Career Support
             </motion.h2>
           </div>
         </div>
 
-        {/* Events Tabs */}
-        <div className="event-tabs">
-          <div className="event-tabs-menu">
-            {eventTabs.map((tab, index) => (
-              <motion.button
-                key={tab.id}
-                initial={{ y: 100, opacity: 0 }}
-                animate={isInView ? { y: 0, opacity: 1 } : {}}
-                transition={{ duration: 0.6, delay: index * 0.05 }}
-                onClick={() => setActiveTab(tab.id)}
-                className={`events-tab-link ${activeTab === tab.id ? "w--current" : ""}`}
-              >
-                {tab.label}
-              </motion.button>
-            ))}
-          </div>
+        {/* Intro paragraph */}
+        <motion.p
+          className="paragraph-4"
+          style={{ maxWidth: 680, marginBottom: 60 }}
+          initial={{ opacity: 0, y: 40 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.7, delay: 0.2 }}
+        >
+          We ensure that financial limitations do not stop deserving students
+          from achieving their goals.
+        </motion.p>
 
-          {/* Tab Content */}
-          <motion.div
-            key={activeTab}
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.4 }}
-            className="event-tab-content-wrap"
-          >
-            {eventItems.map((event, index) => (
-              <div
-                key={index}
-                className="event-tab-content-item group"
-              >
-                <div className="event-bg-color" />
-                <div className="event-tab-header-content">
-                  <p className="event-date">{event.date}</p>
-                  <span className="event-category-button">{event.category}</span>
-                </div>
-                <h3 className="event-tab-content-title">{event.title}</h3>
-                <p className="paragraph-4">{event.description}</p>
-                <div className="tab-icon" style={{ marginTop: "auto" }}>
-                  <Image
-                    src="/images/arrow-right-dark.svg"
-                    alt="Arrow"
-                    width={24}
-                    height={24}
-                  />
-                </div>
+        {/* Support Cards */}
+        <motion.div
+          className="event-tab-content-wrap"
+          initial={{ opacity: 0, y: 50 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.3 }}
+        >
+          {supportItems.map((item, index) => (
+            <div key={index} className="event-tab-content-item group">
+              <span className="event-category-button" style={{ display: "inline-block", marginBottom: 24 }}>
+                0{index + 1}
+              </span>
+              <h3 className="event-tab-content-title">{item.title}</h3>
+              <p className="paragraph-4">{item.description}</p>
+              <div className="tab-icon" style={{ marginTop: "auto" }}>
+                <Image
+                  src="/images/arrow-right-dark.svg"
+                  alt="Arrow"
+                  width={24}
+                  height={24}
+                />
               </div>
-            ))}
-          </motion.div>
-        </div>
+            </div>
+          ))}
+        </motion.div>
       </div>
     </section>
   );

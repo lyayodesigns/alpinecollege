@@ -7,27 +7,21 @@ import { useRef, useState } from "react";
 const researchItems = [
   {
     image: "/images/research1.png",
-    title: "Library & Resource Center",
+    title: "Library & Research Center",
     description:
-      "A wide collection of course books, reference books, bulletins, national & international journals, periodicals, and daily newspapers. A spacious reading room available during leisure periods.",
+      "A well-managed, spacious reading room featuring a vast collection of basic course books, reference materials, training manuals, and international journals. We provide all required course books for your regular studies.",
   },
   {
     image: "/images/research2.png",
-    title: "Computer Lab",
+    title: "High-Tech Computer Lab",
     description:
-      "Air-conditioned computer lab equipped with the latest high-tech computers, high-speed internet, and campus-wide Wi-Fi — giving students seamless access to the world.",
-  },
-  {
-    image: "/images/research3.png",
-    title: "Student Counseling",
-    description:
-      "Individual counseling for students and guardians covering academic support, career development, further studies within Nepal and abroad, and personal guidance.",
+      "A cozy, air-conditioned lab equipped with the latest modern computers and high-speed Wi-Fi. Students can research global trends and complete digital assignments with just a few clicks.",
   },
   {
     image: "/images/research1.png",
     title: "Rooftop Canteen",
     description:
-      "A welcoming rooftop canteen offering healthy, hygienic meals, snacks, cold drinks, and daily essentials at affordable prices for the AMC community.",
+      "A vibrant space to relax and recharge. The canteen provides healthy, hygienic foods, tasty snacks, and cold drinks at highly affordable prices for all students and staff.",
   },
 ];
 
@@ -80,7 +74,7 @@ export default function Research() {
       )}
 
       <div className="container mb-30">
-        {/* Header — consistent with Faculty / CampusLife pattern */}
+        {/* Header — consistent with Faculty / WhyChooseUs pattern */}
         <div className="section-cotent-wrap grid-item ">
           <div className="grid-one">
             <motion.p
@@ -99,7 +93,7 @@ export default function Research() {
               animate={isInView ? { y: 0, opacity: 1 } : {}}
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
-              Facilities built
+              A Campus Designed
             </motion.h2>
             <motion.h2
               className="section-title"
@@ -107,7 +101,7 @@ export default function Research() {
               animate={isInView ? { y: 0, opacity: 1 } : {}}
               transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
             >
-              for student
+              for Your
             </motion.h2>
             <motion.h2
               className="section-title mb-30"
@@ -115,16 +109,8 @@ export default function Research() {
               animate={isInView ? { y: 0, opacity: 1 } : {}}
               transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
             >
-              success
+              Success
             </motion.h2>
-            <motion.p
-              className="section-paragraph white small"
-              initial={{ y: 150, opacity: 0 }}
-              animate={isInView ? { y: 0, opacity: 1 } : {}}
-              transition={{ duration: 0.8, delay: 0.3 }}
-            >
-              From a fully-stocked library and air-conditioned computer lab to a rooftop canteen and dedicated counseling services, AMC provides everything students need to thrive.
-            </motion.p>
           </div>
         </div>
 

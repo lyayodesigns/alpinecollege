@@ -10,30 +10,21 @@ export default function About() {
 
   return (
     <section ref={ref} className="about-section">
-      <div className="about-image">
-        <Image
-          src="/images/about-spiral.svg"
-          alt=""
-          width={200}
-          height={200}
-          style={{ width: 'auto' }}
-        />
-      </div>
       <div className="container">
         <div className="about-two-col">
           {/* Left: Text */}
           <div className="about-text-col">
             <motion.p
               className="section-paragraph"
-              initial={{ opacity: 0 }}
-              animate={isInView ? { opacity: 1 } : {}}
+              initial={{ y: 50, opacity: 0 }}
+              animate={isInView ? { y: 0, opacity: 1 } : {}}
               transition={{ duration: 0.6 }}
             >
               About AMC
             </motion.p>
             <motion.h2
               className="about-heading"
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: 100, opacity: 0 }}
               animate={isInView ? { y: 0, opacity: 1 } : {}}
               transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
             >
@@ -41,7 +32,7 @@ export default function About() {
             </motion.h2>
             <motion.p
               className="about-body normal-case"
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 60 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.7, delay: 0.25 }}
             >
@@ -49,7 +40,7 @@ export default function About() {
             </motion.p>
             <motion.p
               className="about-body normal-case"
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 60 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.7, delay: 0.4 }}
             >
@@ -60,8 +51,8 @@ export default function About() {
           {/* Right: Image */}
           <motion.div
             className="about-image-col"
-            initial={{ opacity: 0, x: 60 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            initial={{ opacity: 0, x: 100, scale: 0.95 }}
+            animate={isInView ? { opacity: 1, x: 0, scale: 1 } : {}}
             transition={{ duration: 0.9, delay: 0.2, ease: "easeOut" }}
           >
             <Image
