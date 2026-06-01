@@ -11,18 +11,6 @@ const footerLinks = {
     { name: "Contact Us", href: "#" },
     { name: "Management Team", href: "#" },
   ],
-  faculty: [
-    { name: "BBA Faculty", href: "#" },
-    { name: "BHM Faculty", href: "#" },
-    { name: "Guest Lecturers", href: "#" },
-    { name: "Staff", href: "#" },
-  ],
-  aboutTwo: [
-    { name: "Library", href: "#" },
-    { name: "Computer Lab", href: "#" },
-    { name: "Canteen", href: "#" },
-    { name: "Counseling", href: "#" },
-  ],
   department: [
     { name: "BBA Program", href: "#" },
     { name: "BHM Program", href: "#" },
@@ -84,11 +72,38 @@ export default function Footer() {
       ref={ref}
       className="relative overflow-hidden pt-[120px] bg-deep-midnight"
     >
-      <div className="w-full max-w-[1570px] mx-auto px-10 overflow-hidden">
-        <div className="grid grid-cols-6 gap-4 pb-[120px]">
+      <div className="w-full max-w-[1710px] mx-auto px-10 overflow-hidden">
+        <div className="grid grid-cols-5 gap-4 pb-[120px]">
           <FooterColumn title="About" links={footerLinks.about} delay={0} />
-          <FooterColumn title="Faculty" links={footerLinks.faculty} delay={0.1} />
-          <FooterColumn title="Facilities" links={footerLinks.aboutTwo} delay={0.2} />
+          {/* Contact Column */}
+          <motion.div
+            initial={{ y: 150, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            <h3 className="m-0 mb-10 text-white text-2xl leading-6 font-normal capitalize">
+              Contact
+            </h3>
+            <div className="flex flex-col gap-6">
+              <div>
+                <p className="m-0 text-white/50 text-sm uppercase tracking-widest mb-2">Address</p>
+                <p className="m-0 text-white/80 text-lg leading-[170%] capitalize">Adarshnagar, Nepalgunj, Banke</p>
+              </div>
+              <div>
+                <p className="m-0 text-white/50 text-sm uppercase tracking-widest mb-2">Phone</p>
+                <a href="tel:+977081536877" className="no-underline text-white/80 text-lg leading-[170%]">
+                  +977-081-536877
+                </a>
+              </div>
+              <div>
+                <p className="m-0 text-white/50 text-sm uppercase tracking-widest mb-2">Email</p>
+                <a href="mailto:contact@alpinecollege.edu.np" className="no-underline text-white/80 text-lg leading-[170%] normal-case">
+                  contact@alpinecollege.edu.np
+                </a>
+              </div>
+            </div>
+          </motion.div>
           <FooterColumn title="Department" links={footerLinks.department} delay={0.3} />
           <FooterColumn title="Updates" links={footerLinks.updates} delay={0.4} />
 

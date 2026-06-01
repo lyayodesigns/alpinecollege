@@ -1,7 +1,6 @@
 "use client";
 
 import { motion, useInView } from "framer-motion";
-import Image from "next/image";
 import { useRef } from "react";
 
 const testimonials = [
@@ -10,21 +9,18 @@ const testimonials = [
       "AMC gave me not just a degree but the confidence and skills to face the real world. The faculty’s guidance and the internship experience were truly life-changing.",
     name: "Sanjay Thapa",
     role: "BBA Graduate",
-    image: "/images/testimonial1.png",
   },
   {
     quote:
       "My internship in Dubai through AMC’s BHM program opened doors I never imagined. The college’s industry connections and dedicated mentors made all the difference.",
     name: "Priya Sharma",
     role: "BHM Graduate",
-    image: "/images/testimonial2.png",
   },
   {
     quote:
       "The scholarship, the Wi-Fi-enabled classrooms, and the extra-curricular activities at AMC create the perfect environment to grow both academically and personally.",
     name: "Anil KC",
     role: "BBA Student",
-    image: "/images/testimonial2.png",
   },
 ];
 
@@ -39,14 +35,7 @@ function DarkCard({ t, hoverShadow }: { t: typeof testimonials[number]; hoverSha
         {t.quote}
       </p>
       <div className="flex items-center">
-        <Image
-          src={t.image}
-          alt={t.name}
-          width={50}
-          height={50}
-          className="rounded-full"
-        />
-        <div className="ml-2.5">
+        <div className="ml-0">
           <h4 className="mt-0 text-white leading-[18px] font-normal capitalize">
             {t.name}
           </h4>

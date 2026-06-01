@@ -114,19 +114,15 @@ export default function WhyChooseUs() {
           </motion.p>
         </div>
 
-        {/* Feature Grid */}
-        <div className="grid grid-cols-4 gap-6 max-[1280px]:grid-cols-3 max-[1024px]:grid-cols-2 max-[640px]:grid-cols-1">
-          {features.map((feature, index) => (
+        {/* Feature Grid — Row 1 */}
+        <div className="grid grid-cols-4 gap-6 mb-6 max-[1280px]:grid-cols-3 max-[1024px]:grid-cols-2 max-[640px]:grid-cols-1">
+          {features.slice(0, 4).map((feature, index) => (
             <motion.div
               key={index}
               className="group relative px-8 py-9 bg-white border border-rock-grey/20 rounded-[20px] flex flex-col gap-4 transition-all duration-300 overflow-hidden hover:-translate-y-1.5 hover:shadow-[0_24px_48px_rgba(26,26,46,0.08)] hover:border-rock-grey/30"
               initial={{ y: 50, opacity: 0 }}
               animate={isInView ? { y: 0, opacity: 1 } : {}}
-              transition={{
-                duration: 0.55,
-                delay: 0.25 + index * 0.08,
-                ease: "easeOut",
-              }}
+              transition={{ duration: 0.55, delay: 0.25 + index * 0.08, ease: "easeOut" }}
             >
               <div className="absolute left-0 top-0 bottom-0 w-[3px] bg-summit-orange origin-top scale-y-0 transition-transform duration-300 group-hover:scale-y-100" />
               <div className="flex items-center justify-between mb-2">
@@ -137,12 +133,33 @@ export default function WhyChooseUs() {
                   {feature.icon}
                 </div>
               </div>
-              <h3 className="m-0 text-deep-midnight text-xl leading-[1.3] font-medium normal-case">
-                {feature.title}
-              </h3>
-              <p className="m-0 text-rock-grey text-[15px] leading-[1.65] font-normal normal-case">
-                {feature.description}
-              </p>
+              <h3 className="m-0 text-deep-midnight text-xl leading-[1.3] font-medium normal-case">{feature.title}</h3>
+              <p className="m-0 text-rock-grey text-[15px] leading-[1.65] font-normal normal-case">{feature.description}</p>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Feature Grid — Row 2 (centered) */}
+        <div className="flex justify-center gap-6 flex-wrap">
+          {features.slice(4).map((feature, index) => (
+            <motion.div
+              key={index}
+              className="group relative px-8 py-9 bg-white border border-rock-grey/20 rounded-[20px] flex flex-col gap-4 transition-all duration-300 overflow-hidden hover:-translate-y-1.5 hover:shadow-[0_24px_48px_rgba(26,26,46,0.08)] hover:border-rock-grey/30 w-[calc(25%-18px)] max-[1280px]:w-[calc(33.333%-16px)] max-[1024px]:w-[calc(50%-12px)] max-[640px]:w-full"
+              initial={{ y: 50, opacity: 0 }}
+              animate={isInView ? { y: 0, opacity: 1 } : {}}
+              transition={{ duration: 0.55, delay: 0.25 + (index + 4) * 0.08, ease: "easeOut" }}
+            >
+              <div className="absolute left-0 top-0 bottom-0 w-[3px] bg-summit-orange origin-top scale-y-0 transition-transform duration-300 group-hover:scale-y-100" />
+              <div className="flex items-center justify-between mb-2">
+                <span className="font-serif-display text-rock-grey/25 text-4xl leading-none font-normal">
+                  {String(index + 5).padStart(2, "0")}
+                </span>
+                <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-alpine-blue-50 text-alpine-blue transition-colors duration-300 group-hover:bg-alpine-blue group-hover:text-white">
+                  {feature.icon}
+                </div>
+              </div>
+              <h3 className="m-0 text-deep-midnight text-xl leading-[1.3] font-medium normal-case">{feature.title}</h3>
+              <p className="m-0 text-rock-grey text-[15px] leading-[1.65] font-normal normal-case">{feature.description}</p>
             </motion.div>
           ))}
         </div>

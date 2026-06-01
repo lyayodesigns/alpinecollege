@@ -23,7 +23,7 @@ export default function Faculty() {
             </motion.p>
           </div>
           <div>
-            {["Guaranteed Internship", "and Placement", "Programs"].map((line, i) => (
+            {["Guaranteed Internship", "and Placement Programs"].map((line, i) => (
               <motion.h2
                 key={i}
                 className="m-0 text-deep-midnight text-[56px] leading-[75px] font-normal -tracking-[0.01em] uppercase"
