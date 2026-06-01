@@ -70,11 +70,11 @@ export default function CounterStats() {
 
   return (
     <section ref={ref} className="bg-deep-midnight pb-[30px]">
-      <div className="w-full max-w-[1570px] mx-auto px-10 overflow-hidden">
-        <div className="pt-[60px] relative z-0 grid grid-cols-[1fr_2fr] gap-4 mb-[100px]">
+      <div className="w-full max-w-[1570px] mx-auto px-4 sm:px-10 overflow-hidden">
+        <div className="pt-[60px] relative z-0 grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-4 mb-[60px] md:mb-[100px]">
           <div>
             <motion.p
-              className="text-2xl leading-none uppercase text-white font-normal"
+              className="text-base sm:text-2xl leading-none uppercase text-white font-normal text-center md:text-left"
               initial={{ opacity: 0 }}
               animate={isInView ? { opacity: 1 } : {}}
               transition={{ duration: 0.6 }}
@@ -84,7 +84,7 @@ export default function CounterStats() {
           </div>
           <div>
             <motion.h2
-              className="m-0 text-white text-[56px] leading-[75px] font-normal -tracking-[0.01em] uppercase"
+              className="m-0 text-white text-[26px] sm:text-[44px] md:text-[56px] leading-tight md:leading-[75px] font-normal -tracking-[0.01em] uppercase text-center md:text-left"
               initial={{ y: 200, opacity: 0 }}
               animate={isInView ? { y: 0, opacity: 1 } : {}}
               transition={{ duration: 0.8, ease: "easeOut" }}
@@ -92,7 +92,7 @@ export default function CounterStats() {
               Numbers that speak
             </motion.h2>
             <motion.h2
-              className="m-0 text-white text-[56px] leading-[75px] font-normal -tracking-[0.01em] uppercase"
+              className="m-0 text-white text-[26px] sm:text-[44px] md:text-[56px] leading-tight md:leading-[75px] font-normal -tracking-[0.01em] uppercase text-center md:text-left"
               initial={{ y: 200, opacity: 0 }}
               animate={isInView ? { y: 0, opacity: 1 } : {}}
               transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
@@ -101,28 +101,28 @@ export default function CounterStats() {
             </motion.h2>
           </div>
         </div>
-        <div className="grid grid-cols-3 gap-4 justify-items-center">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 sm:gap-4 justify-items-center">
           {stats.map((stat, index) => (
             <motion.div
               key={index}
-              className={`relative overflow-hidden items-center ${index === 1 ? "ml-[30px]" : ""}`}
+              className="relative overflow-hidden items-center w-full flex flex-col items-center sm:items-start"
               initial={{ y: 50, opacity: 0.3, skewY: 4 }}
               animate={isInView ? { y: 0, opacity: 1, skewY: 0 } : {}}
               transition={{ duration: 0.6, delay: index * 0.15 }}
             >
-              <div className="flex mb-7">
-                <h3 className="m-0 font-serif-display text-alpine-blue text-[68px] leading-none">
+              <div className="flex mb-7 justify-center sm:justify-start">
+                <h3 className="m-0 font-serif-display text-alpine-blue text-[44px] sm:text-[68px] leading-none">
                   <AnimatedNumber value={stat.number} suffix={stat.suffix} />
                 </h3>
-                <h1 className="m-0 pl-7 font-display text-white text-[32px] leading-[130%] font-normal capitalize">
+                <h1 className="m-0 pl-4 sm:pl-7 font-display text-white text-[18px] sm:text-[28px] md:text-[32px] leading-[130%] font-normal capitalize">
                   {stat.title}
                 </h1>
               </div>
-              <p className="max-w-[360px] text-white/70 text-lg leading-[130%] font-normal capitalize">
+              <p className="max-w-[360px] text-white/70 text-sm sm:text-lg leading-[130%] font-normal capitalize text-center sm:text-left">
                 {stat.description}
               </p>
               {index < 2 && (
-                <div className="absolute right-0 top-0 w-px h-[100px] bg-summit-orange translate-y-1/2" />
+                <div className="hidden sm:block absolute right-0 top-0 w-px h-[100px] bg-summit-orange translate-y-1/2" />
               )}
             </motion.div>
           ))}

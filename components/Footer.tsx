@@ -70,10 +70,10 @@ export default function Footer() {
   return (
     <footer
       ref={ref}
-      className="relative overflow-hidden pt-[120px] bg-deep-midnight"
+      className="relative overflow-hidden pt-[60px] sm:pt-[120px] bg-deep-midnight"
     >
-      <div className="w-full max-w-[1710px] mx-auto px-10 overflow-hidden">
-        <div className="grid grid-cols-5 gap-4 pb-[120px]">
+      <div className="w-full max-w-[1710px] mx-auto px-4 sm:px-10 overflow-hidden">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8 sm:gap-6 pb-[60px] sm:pb-[120px]">
           <FooterColumn title="About" links={footerLinks.about} delay={0} />
           {/* Contact Column */}
           <motion.div
@@ -81,6 +81,7 @@ export default function Footer() {
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6, delay: 0.2 }}
+            className="col-span-2 sm:col-span-1"
           >
             <h3 className="m-0 mb-10 text-white text-2xl leading-6 font-normal capitalize">
               Contact
@@ -112,14 +113,14 @@ export default function Footer() {
             initial={{ y: 150, opacity: 0 }}
             animate={isInView ? { y: 0, opacity: 1 } : {}}
             transition={{ duration: 0.6, delay: 0.5 }}
-            className="flex flex-col gap-5"
+            className="flex flex-col gap-5 col-span-2 sm:col-span-3 lg:col-span-1"
           >
             {[{ text: "APPLY NOW" }, { text: "SCHOLARSHIP" }, { text: "INTERNSHIP" }].map(
               (item, index) => (
                 <a
                   key={index}
                   href="#"
-                  className="z-0 flex w-[230px] h-16 px-[1.375rem] py-[0.875rem] justify-center items-center border border-white rounded-full bg-transparent text-white font-bold text-center no-underline transition-colors hover:bg-alpine-blue hover:border-alpine-blue mb-5"
+                  className="z-0 flex w-full sm:w-[230px] h-14 sm:h-16 px-[1.375rem] py-[0.875rem] justify-center items-center border border-white rounded-full bg-transparent text-white font-bold text-center no-underline transition-colors hover:bg-alpine-blue hover:border-alpine-blue mb-2 sm:mb-5"
                 >
                   <span className="text-xl font-normal no-underline">{item.text}</span>
                 </a>
@@ -130,7 +131,7 @@ export default function Footer() {
 
         {/* Copyright row */}
         <motion.div
-          className="flex flex-wrap justify-between items-center py-[33px] border-t border-white/15"
+          className="flex flex-col sm:flex-row gap-6 sm:gap-0 flex-wrap justify-between items-center py-[24px] sm:py-[33px] border-t border-white/15"
           initial={{ y: 50, opacity: 0 }}
           animate={isInView ? { y: 0, opacity: 1 } : {}}
           transition={{ duration: 0.6, delay: 0.6 }}

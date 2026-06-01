@@ -32,18 +32,18 @@ export default function Events() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section ref={ref} className="relative z-0 py-[160px] bg-white">
+    <section ref={ref} className="relative z-0 py-[60px] sm:py-[160px] bg-white">
       {/* Background decoration */}
       <div className="absolute left-0 bottom-0 -z-10">
         <Image src="/images/event-frame.png" alt="" width={400} height={400} />
       </div>
 
-      <div className="w-full max-w-[1570px] mx-auto px-10 overflow-hidden">
+      <div className="w-full max-w-[1570px] mx-auto px-4 sm:px-10 overflow-hidden">
         {/* Section Header */}
-        <div className="pt-[60px] relative z-0 grid grid-cols-[1fr_2fr] gap-4">
+        <div className="pt-[40px] sm:pt-[60px] relative z-0 grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-4">
           <div>
             <motion.p
-              className="text-2xl leading-none uppercase text-summit-orange"
+              className="text-base sm:text-2xl leading-none uppercase text-summit-orange text-center md:text-left"
               initial={{ x: -150, opacity: 0 }}
               animate={isInView ? { x: 0, opacity: 1 } : {}}
               transition={{ duration: 0.6 }}
@@ -51,11 +51,11 @@ export default function Events() {
               Student Support
             </motion.p>
           </div>
-          <div className="mb-[100px]">
+          <div className="mb-[50px] md:mb-[100px]">
             {["Financial Aid And", "Career Support"].map((line, i) => (
               <motion.h2
                 key={i}
-                className="m-0 text-deep-midnight text-[56px] leading-[75px] font-normal -tracking-[0.01em] uppercase"
+                className="m-0 text-deep-midnight text-[26px] sm:text-[40px] md:text-[56px] leading-tight md:leading-[75px] font-normal -tracking-[0.01em] uppercase text-center md:text-left"
                 initial={{ y: 100, opacity: 0 }}
                 animate={isInView ? { y: 0, opacity: 1 } : {}}
                 transition={{ duration: 0.8, delay: i * 0.1, ease: "easeOut" }}
@@ -68,7 +68,7 @@ export default function Events() {
 
         {/* Intro paragraph */}
         <motion.p
-          className="max-w-[680px] mb-[60px] text-deep-midnight text-lg leading-[135%] capitalize"
+          className="max-w-[680px] mx-auto md:mx-0 mb-[40px] sm:mb-[60px] text-deep-midnight text-sm sm:text-lg leading-[135%] capitalize text-center md:text-left"
           initial={{ opacity: 0, y: 40 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7, delay: 0.2 }}
@@ -79,7 +79,7 @@ export default function Events() {
 
         {/* Support Cards */}
         <motion.div
-          className="grid grid-cols-2 gap-[30px]"
+          className="grid grid-cols-1 sm:grid-cols-2 gap-[20px] sm:gap-[30px]"
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.3 }}
@@ -87,15 +87,15 @@ export default function Events() {
           {supportItems.map((item, index) => (
             <div
               key={index}
-              className="group relative z-0 p-[50px] border border-rock-grey rounded-[20px] bg-white flex flex-col"
+              className="group relative z-0 p-6 sm:p-[50px] border border-rock-grey rounded-[20px] bg-white flex flex-col"
             >
-              <span className="inline-block mb-6 px-7 py-3.5 border border-summit-orange rounded-full bg-transparent text-deep-midnight text-[28px] leading-none font-normal capitalize w-fit transition-colors hover:bg-summit-orange hover:text-white">
+              <span className="inline-block mb-6 px-5 sm:px-7 py-2.5 sm:py-3.5 border border-summit-orange rounded-full bg-transparent text-deep-midnight text-[18px] sm:text-[28px] leading-none font-normal capitalize w-fit transition-colors hover:bg-summit-orange hover:text-white">
                 0{index + 1}
               </span>
-              <h3 className="max-w-[400px] pb-[38px] text-[36px] leading-[130%] font-normal capitalize">
+              <h3 className="max-w-[400px] pb-6 sm:pb-[38px] text-[22px] sm:text-[28px] md:text-[36px] leading-[130%] font-normal capitalize">
                 {item.title}
               </h3>
-              <p className="max-w-[380px] mb-[60px] text-deep-midnight text-lg leading-[135%] capitalize">
+              <p className="max-w-[380px] mb-8 sm:mb-[60px] text-deep-midnight text-sm sm:text-lg leading-[135%] capitalize">
                 {item.description}
               </p>
               <div className="mt-auto flex w-[50px] h-[50px] justify-center items-center border border-white/20 rounded-full bg-white/5 transition-all duration-300">

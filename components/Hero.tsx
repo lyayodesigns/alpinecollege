@@ -10,13 +10,13 @@ export default function Hero() {
         <div className="flex flex-col lg:flex-row justify-between items-end relative">
           
           {/* Text Content */}
-          <div className="w-full lg:w-1/2 static lg:absolute z-20 left-0 bottom-10 pb-10">
+          <div className="w-full lg:w-1/2 static lg:absolute z-20 left-0 bottom-10 pb-10 text-center lg:text-left">
             <div className="overflow-hidden mb-6">
               <motion.h1
                 initial={{ y: "100%", opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.8, delay: 0.3, ease: [0.215, 0.61, 0.355, 1] }}
-                className="text-white text-[28px] sm:text-[38px] md:text-[48px] lg:text-[56px] leading-[1.1] font-normal tracking-tight font-sans"
+                className="text-white text-[28px] sm:text-[38px] md:text-[48px] lg:text-[56px] leading-[1.1] font-normal tracking-tight font-sans text-center lg:text-left"
               >
                 Shape Your Future at Alpine Management College (AMC)
               </motion.h1>
@@ -26,7 +26,7 @@ export default function Hero() {
                 initial={{ y: "100%", opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.8, delay: 0.5, ease: [0.215, 0.61, 0.355, 1] }}
-                className="text-white text-base sm:text-lg lg:text-[20px] leading-[1.5] max-w-[560px] font-sans opacity-90 normal-case"
+                className="text-white text-base sm:text-lg lg:text-[20px] leading-[1.5] max-w-[560px] mx-auto lg:mx-0 font-sans opacity-90 normal-case"
               >
                 The Pioneer in Business and Hospitality Education in Nepalgunj. Affiliated with Pokhara University, we transform ambitious students into global corporate leaders and top-tier hospitality professionals.
               </motion.p>
@@ -35,7 +35,7 @@ export default function Hero() {
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.7, ease: [0.215, 0.61, 0.355, 1] }}
-              className="flex flex-wrap gap-4"
+              className="flex flex-wrap gap-4 justify-center lg:justify-start"
             >
               <a
                 href="#apply"

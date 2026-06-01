@@ -8,13 +8,13 @@ export default function Faculty() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section ref={ref} className="mx-auto pb-[60px] bg-white text-xl">
-      <div className="w-full max-w-[1570px] mx-auto px-10 overflow-hidden">
+    <section ref={ref} className="mx-auto pb-[40px] sm:pb-[60px] bg-white text-xl">
+      <div className="w-full max-w-[1570px] mx-auto px-4 sm:px-10 overflow-hidden">
         {/* Section Header */}
-        <div className="pt-[60px] relative z-0 grid grid-cols-[1fr_2fr] gap-4 mb-[100px]">
+        <div className="pt-[40px] sm:pt-[60px] relative z-0 grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-4 mb-[60px] md:mb-[100px]">
           <div>
             <motion.p
-              className="text-2xl leading-none uppercase text-summit-orange"
+              className="text-base sm:text-2xl leading-none uppercase text-summit-orange text-center md:text-left"
               initial={{ x: -150, opacity: 0 }}
               animate={isInView ? { x: 0, opacity: 1 } : {}}
               transition={{ duration: 0.6 }}
@@ -26,7 +26,7 @@ export default function Faculty() {
             {["Guaranteed Internship", "and Placement Programs"].map((line, i) => (
               <motion.h2
                 key={i}
-                className="m-0 text-deep-midnight text-[56px] leading-[75px] font-normal -tracking-[0.01em] uppercase"
+                className="m-0 text-deep-midnight text-[26px] sm:text-[40px] md:text-[56px] leading-tight md:leading-[75px] font-normal -tracking-[0.01em] uppercase text-center md:text-left"
                 initial={{ y: 100, opacity: 0 }}
                 animate={isInView ? { y: 0, opacity: 1 } : {}}
                 transition={{ duration: 0.8, delay: i * 0.1, ease: "easeOut" }}
@@ -39,7 +39,7 @@ export default function Faculty() {
 
         {/* Intro paragraph */}
         <motion.p
-          className="max-w-4xl mb-[60px] text-rock-grey text-base leading-[150%] font-normal capitalize"
+          className="max-w-4xl mb-[40px] sm:mb-[60px] text-rock-grey text-sm sm:text-base leading-[150%] font-normal capitalize text-center md:text-left"
           initial={{ y: 60, opacity: 0 }}
           animate={isInView ? { y: 0, opacity: 1 } : {}}
           transition={{ duration: 0.7, delay: 0.15 }}
@@ -48,7 +48,7 @@ export default function Faculty() {
         </motion.p>
 
         {/* Split Screen */}
-        <div className="grid grid-cols-2 gap-5 items-stretch">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 items-stretch">
           {[
             {
               cat: "BBA",
@@ -67,7 +67,7 @@ export default function Faculty() {
           ].map((item) => (
             <motion.div
               key={item.cat}
-              className="group p-9 rounded-[20px] bg-deep-midnight transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_20px_40px_rgba(26,26,46,0.25)]"
+              className="group p-6 sm:p-9 rounded-[20px] bg-deep-midnight transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_20px_40px_rgba(26,26,46,0.25)] flex flex-col items-center sm:items-start text-center sm:text-left"
               initial={{ x: item.fromX, opacity: 0 }}
               animate={isInView ? { x: 0, opacity: 1 } : {}}
               transition={{ duration: 0.7, delay: item.delay }}
@@ -77,7 +77,7 @@ export default function Faculty() {
                   {item.cat}
                 </h3>
               </div>
-              <h2 className="max-w-full m-0 pb-6 text-white text-[30px] leading-[140%] font-medium capitalize">
+              <h2 className="max-w-full m-0 pb-6 text-white text-[22px] sm:text-[30px] leading-[140%] font-medium capitalize">
                 {item.title}
               </h2>
               <p className="max-w-full m-0 text-white/65 text-base leading-[150%] font-normal capitalize">

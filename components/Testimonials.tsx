@@ -27,11 +27,11 @@ const testimonials = [
 function DarkCard({ t, hoverShadow }: { t: typeof testimonials[number]; hoverShadow: string }) {
   return (
     <motion.div
-      className="inline-block mb-[30px] p-[42px] rounded-[20px] text-left transition-all duration-300 bg-summit-orange min-h-[260px] min-w-[390px]"
+      className="inline-block mb-[30px] p-6 sm:p-[42px] rounded-[20px] text-left transition-all duration-300 bg-summit-orange min-h-0 sm:min-h-[260px] w-full sm:min-w-[390px]"
       whileHover={{ y: -8, boxShadow: hoverShadow }}
       transition={{ duration: 0.3 }}
     >
-      <p className="max-w-[310px] mb-12 text-white text-[22px] leading-[135%] capitalize">
+      <p className="max-w-full sm:max-w-[310px] mb-8 sm:mb-12 text-white text-[17px] sm:text-[22px] leading-[135%] capitalize">
         {t.quote}
       </p>
       <div className="flex items-center">
@@ -51,14 +51,14 @@ export default function Testimonials() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section ref={ref} className="overflow-hidden min-h-[900px] py-[60px] bg-white">
-      <div className="w-full max-w-[1570px] mx-auto px-10 overflow-hidden">
-        <div className="flex justify-between flex-wrap items-center">
+    <section ref={ref} className="overflow-hidden min-h-0 sm:min-h-[900px] py-[40px] sm:py-[60px] bg-white">
+      <div className="w-full max-w-[1570px] mx-auto px-4 sm:px-10 overflow-hidden">
+        <div className="flex flex-col sm:flex-row justify-between flex-wrap items-start sm:items-center">
           {/* Left: title */}
-          <div className="flex-1 self-start">
-            <div className="pt-[150px]">
+          <div className="w-full sm:flex-1 self-start">
+            <div className="pt-[30px] sm:pt-[150px] text-center sm:text-left">
               <motion.p
-                className="text-2xl leading-none uppercase text-summit-orange"
+                className="text-base sm:text-2xl leading-none uppercase text-summit-orange"
                 initial={{ y: 100, opacity: 0 }}
                 animate={isInView ? { y: 0, opacity: 1 } : {}}
                 transition={{ duration: 0.6 }}
@@ -66,32 +66,27 @@ export default function Testimonials() {
                 Testimonial
               </motion.p>
               <motion.h2
-                className="m-0 text-deep-midnight text-[56px] leading-[75px] font-normal -tracking-[0.01em] uppercase"
+                className="m-0 text-deep-midnight text-[28px] sm:text-[40px] md:text-[56px] leading-tight md:leading-[75px] font-normal -tracking-[0.01em] uppercase"
                 initial={{ y: 100, opacity: 0 }}
                 animate={isInView ? { y: 0, opacity: 1 } : {}}
                 transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
               >
                 <span className="text-deep-midnight-300">Students</span>
                 <br />
-                <span className="pl-[50px]">Feedback</span>
+                <span className="pl-[25px] sm:pl-[50px]">Feedback</span>
               </motion.h2>
             </div>
           </div>
 
           {/* Right: testimonial columns */}
-          <div className="flex-1 flex justify-end">
+          <div className="w-full sm:flex-1 flex justify-end mt-8 sm:mt-0">
             {/* Column 1 — slides from top */}
             <motion.div
-              className="mt-0 flex-none text-right"
+              className="mt-0 flex-none text-right hidden sm:block"
               initial={{ y: -770 }}
               animate={isInView ? { y: 0 } : {}}
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
-              {/* Light spacer on white bg */}
-              <div className="flex justify-end">
-                <div className="inline-block mb-[30px] p-[42px] rounded-[20px] text-left bg-snow-white border border-rock-grey/20 min-h-[380px] min-w-[390px]" />
-              </div>
-
               {/* Dark card */}
               <div className="flex justify-end">
                 <DarkCard
@@ -103,7 +98,7 @@ export default function Testimonials() {
 
             {/* Column 2 — slides from bottom */}
             <motion.div
-              className="-mt-[380px] ml-[30px] flex-1"
+              className="mt-0 sm:-mt-[380px] ml-0 sm:ml-[30px] flex-1"
               initial={{ y: 500 }}
               animate={isInView ? { y: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
@@ -117,8 +112,7 @@ export default function Testimonials() {
                 </div>
               ))}
 
-              {/* Light spacer on white bg */}
-              <div className="flex justify-end">
+              <div className="hidden sm:flex justify-end">
                 <div className="inline-block mb-[30px] p-[42px] rounded-[20px] text-left bg-snow-white border border-rock-grey/20 min-h-[380px] min-w-[390px]" />
               </div>
             </motion.div>

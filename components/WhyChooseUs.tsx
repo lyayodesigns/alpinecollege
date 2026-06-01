@@ -85,9 +85,9 @@ export default function WhyChooseUs() {
       ref={ref}
       className="bg-white py-[120px] pb-[140px] max-[640px]:py-[80px] max-[640px]:pb-[100px]"
     >
-      <div className="w-full max-w-[1570px] mx-auto px-10">
+      <div className="w-full max-w-[1570px] mx-auto px-4 sm:px-10">
         {/* Section Header */}
-        <div className="max-w-[720px] mb-20">
+        <div className="max-w-[720px] mb-20 mx-auto sm:mx-0 text-center sm:text-left">
           <motion.p
             className="inline-block mb-5 px-5 py-2 rounded-full bg-summit-orange-50 text-summit-orange text-sm font-semibold tracking-[0.04em] uppercase leading-none"
             initial={{ y: 60, opacity: 0 }}
@@ -105,7 +105,7 @@ export default function WhyChooseUs() {
             Why Choose Us?
           </motion.h2>
           <motion.p
-            className="m-0 max-w-[540px] text-rock-grey text-lg leading-[1.7] font-normal normal-case"
+            className="m-0 max-w-[540px] mx-auto sm:mx-0 text-rock-grey text-lg leading-[1.7] font-normal normal-case"
             initial={{ y: 40, opacity: 0 }}
             animate={isInView ? { y: 0, opacity: 1 } : {}}
             transition={{ duration: 0.7, delay: 0.16 }}
@@ -119,16 +119,13 @@ export default function WhyChooseUs() {
           {features.slice(0, 4).map((feature, index) => (
             <motion.div
               key={index}
-              className="group relative px-8 py-9 bg-white border border-rock-grey/20 rounded-[20px] flex flex-col gap-4 transition-all duration-300 overflow-hidden hover:-translate-y-1.5 hover:shadow-[0_24px_48px_rgba(26,26,46,0.08)] hover:border-rock-grey/30"
+              className="group relative px-8 py-9 bg-white border border-rock-grey/20 rounded-[20px] flex flex-col gap-4 transition-all duration-300 overflow-hidden hover:-translate-y-1.5 hover:shadow-[0_24px_48px_rgba(26,26,46,0.08)] hover:border-rock-grey/30 max-[640px]:items-center max-[640px]:text-center"
               initial={{ y: 50, opacity: 0 }}
               animate={isInView ? { y: 0, opacity: 1 } : {}}
               transition={{ duration: 0.55, delay: 0.25 + index * 0.08, ease: "easeOut" }}
             >
               <div className="absolute left-0 top-0 bottom-0 w-[3px] bg-summit-orange origin-top scale-y-0 transition-transform duration-300 group-hover:scale-y-100" />
-              <div className="flex items-center justify-between mb-2">
-                <span className="font-serif-display text-rock-grey/25 text-4xl leading-none font-normal">
-                  {String(index + 1).padStart(2, "0")}
-                </span>
+              <div className="mb-2">
                 <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-alpine-blue-50 text-alpine-blue transition-colors duration-300 group-hover:bg-alpine-blue group-hover:text-white">
                   {feature.icon}
                 </div>
@@ -144,16 +141,13 @@ export default function WhyChooseUs() {
           {features.slice(4).map((feature, index) => (
             <motion.div
               key={index}
-              className="group relative px-8 py-9 bg-white border border-rock-grey/20 rounded-[20px] flex flex-col gap-4 transition-all duration-300 overflow-hidden hover:-translate-y-1.5 hover:shadow-[0_24px_48px_rgba(26,26,46,0.08)] hover:border-rock-grey/30 w-[calc(25%-18px)] max-[1280px]:w-[calc(33.333%-16px)] max-[1024px]:w-[calc(50%-12px)] max-[640px]:w-full"
+              className="group relative px-8 py-9 bg-white border border-rock-grey/20 rounded-[20px] flex flex-col gap-4 transition-all duration-300 overflow-hidden hover:-translate-y-1.5 hover:shadow-[0_24px_48px_rgba(26,26,46,0.08)] hover:border-rock-grey/30 w-[calc(25%-18px)] max-[1280px]:w-[calc(33.333%-16px)] max-[1024px]:w-[calc(50%-12px)] max-[640px]:w-full max-[640px]:items-center max-[640px]:text-center"
               initial={{ y: 50, opacity: 0 }}
               animate={isInView ? { y: 0, opacity: 1 } : {}}
               transition={{ duration: 0.55, delay: 0.25 + (index + 4) * 0.08, ease: "easeOut" }}
             >
               <div className="absolute left-0 top-0 bottom-0 w-[3px] bg-summit-orange origin-top scale-y-0 transition-transform duration-300 group-hover:scale-y-100" />
-              <div className="flex items-center justify-between mb-2">
-                <span className="font-serif-display text-rock-grey/25 text-4xl leading-none font-normal">
-                  {String(index + 5).padStart(2, "0")}
-                </span>
+              <div className="mb-2">
                 <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-alpine-blue-50 text-alpine-blue transition-colors duration-300 group-hover:bg-alpine-blue group-hover:text-white">
                   {feature.icon}
                 </div>
