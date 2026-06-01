@@ -87,6 +87,11 @@ export default function Testimonials() {
               animate={isInView ? { y: 0 } : {}}
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
+              {/* Light spacer */}
+              <div className="flex justify-end">
+                <div className="inline-block mb-[30px] p-[42px] rounded-[20px] text-left bg-snow-white border border-rock-grey/20 min-h-[380px] min-w-[390px]" />
+              </div>
+
               {/* Dark card */}
               <div className="flex justify-end">
                 <DarkCard
