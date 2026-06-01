@@ -9,12 +9,15 @@ export default function ExtracurricularActivities() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section ref={ref} className="extracurricular-section">
-      <div className="container">
-        <div className="about-two-col">
+    <section
+      ref={ref}
+      className="relative z-0 pt-[100px] pb-[140px] bg-snow-white overflow-hidden max-[900px]:pt-[80px] max-[900px]:pb-[100px]"
+    >
+      <div className="w-full max-w-[1570px] mx-auto px-10 overflow-hidden">
+        <div className="grid grid-cols-1 gap-12 items-center min-[900px]:grid-cols-2 min-[900px]:gap-20">
           {/* Left: Image */}
           <motion.div
-            className="about-image-col"
+            className="rounded-[20px] overflow-hidden h-[520px]"
             initial={{ opacity: 0, x: -100, scale: 0.95 }}
             animate={isInView ? { opacity: 1, x: 0, scale: 1 } : {}}
             transition={{ duration: 0.9, delay: 0.2, ease: "easeOut" }}
@@ -24,15 +27,14 @@ export default function ExtracurricularActivities() {
               alt="Extracurricular Activities at Alpine Management College"
               width={700}
               height={560}
-              className="about-campus-img"
-              style={{ width: "100%", height: "100%", objectFit: "cover" }}
+              className="rounded-[20px] w-full h-full object-cover"
             />
           </motion.div>
 
           {/* Right: Text */}
-          <div className="about-text-col">
+          <div className="flex flex-col gap-6">
             <motion.p
-              className="section-paragraph red"
+              className="text-2xl leading-none uppercase text-summit-orange"
               initial={{ y: 50, opacity: 0 }}
               animate={isInView ? { y: 0, opacity: 1 } : {}}
               transition={{ duration: 0.6 }}
@@ -40,7 +42,7 @@ export default function ExtracurricularActivities() {
               Holistic Development
             </motion.p>
             <motion.h2
-              className="about-heading"
+              className="text-[40px] leading-[1.15] font-medium text-deep-midnight"
               initial={{ y: 100, opacity: 0 }}
               animate={isInView ? { y: 0, opacity: 1 } : {}}
               transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
@@ -48,7 +50,7 @@ export default function ExtracurricularActivities() {
               Beyond the Classroom: Extracurricular Activities
             </motion.h2>
             <motion.p
-              className="about-body normal-case"
+              className="text-base leading-[1.7] text-rock-grey normal-case"
               initial={{ opacity: 0, y: 60 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.7, delay: 0.25 }}
@@ -56,7 +58,7 @@ export default function ExtracurricularActivities() {
               AMC does not believe in academic excellence alone; we aim for the multifaceted development of your entire personality. To succeed today, you must be lively, dynamic, vibrant, competent, and self-confident.
             </motion.p>
             <motion.p
-              className="about-body normal-case"
+              className="text-base leading-[1.7] text-rock-grey normal-case"
               initial={{ opacity: 0, y: 60 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.7, delay: 0.4 }}

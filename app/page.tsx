@@ -11,6 +11,7 @@ import ExtracurricularActivities from "@/components/ExtracurricularActivities";
 import Events from "@/components/Events";
 import News from "@/components/News";
 import Footer from "@/components/Footer";
+import FooterCTA from "@/components/FooterCTA";
 
 export default function Home() {
   return (
@@ -27,6 +28,7 @@ export default function Home() {
       <ExtracurricularActivities />
       <Events />
       <News />
+      <FooterCTA />
       <Footer />
     </main>
   );

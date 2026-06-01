@@ -9,13 +9,16 @@ export default function About() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section ref={ref} className="about-section">
-      <div className="container">
-        <div className="about-two-col">
+    <section
+      ref={ref}
+      className="relative z-0 pt-[100px] pb-[140px] bg-snow-white overflow-hidden"
+    >
+      <div className="w-full max-w-[1570px] mx-auto px-10 overflow-hidden">
+        <div className="grid grid-cols-1 gap-12 items-center min-[900px]:grid-cols-2 min-[900px]:gap-20">
           {/* Left: Text */}
-          <div className="about-text-col">
+          <div className="flex flex-col gap-6">
             <motion.p
-              className="section-paragraph"
+              className="text-2xl leading-none uppercase"
               initial={{ y: 50, opacity: 0 }}
               animate={isInView ? { y: 0, opacity: 1 } : {}}
               transition={{ duration: 0.6 }}
@@ -23,7 +26,7 @@ export default function About() {
               About AMC
             </motion.p>
             <motion.h2
-              className="about-heading"
+              className="text-[40px] leading-[1.15] font-medium text-deep-midnight"
               initial={{ y: 100, opacity: 0 }}
               animate={isInView ? { y: 0, opacity: 1 } : {}}
               transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
@@ -31,7 +34,7 @@ export default function About() {
               Empowering the Next Generation of Leaders
             </motion.h2>
             <motion.p
-              className="about-body normal-case"
+              className="text-base leading-[1.7] text-rock-grey normal-case"
               initial={{ opacity: 0, y: 60 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.7, delay: 0.25 }}
@@ -39,7 +42,7 @@ export default function About() {
               Established in 2009, Alpine Management College (AMC) is strategically located in the rapidly growing industrial city of Nepalgunj, Banke district, within Lumbini Province. We recognized the region&apos;s immense potential and the critical need for skilled professionals, leading us to become the pioneering institution for modern management studies in the area.
             </motion.p>
             <motion.p
-              className="about-body normal-case"
+              className="text-base leading-[1.7] text-rock-grey normal-case"
               initial={{ opacity: 0, y: 60 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.7, delay: 0.4 }}
@@ -50,7 +53,7 @@ export default function About() {
 
           {/* Right: Image */}
           <motion.div
-            className="about-image-col"
+            className="rounded-[20px] overflow-hidden h-[520px]"
             initial={{ opacity: 0, x: 100, scale: 0.95 }}
             animate={isInView ? { opacity: 1, x: 0, scale: 1 } : {}}
             transition={{ duration: 0.9, delay: 0.2, ease: "easeOut" }}
@@ -60,8 +63,7 @@ export default function About() {
               alt="Alpine Management College Campus"
               width={700}
               height={560}
-              className="about-campus-img"
-              style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+              className="rounded-[20px] w-full h-full object-cover"
             />
           </motion.div>
         </div>

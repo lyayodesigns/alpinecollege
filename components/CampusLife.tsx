@@ -81,12 +81,15 @@ export default function CampusLife() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section ref={ref} className="campus-life-area redesigned">
-      <div className="container overflow-visible">
+    <section
+      ref={ref}
+      className="bg-white py-[120px] pb-[140px] max-[640px]:py-[80px] max-[640px]:pb-[100px]"
+    >
+      <div className="w-full max-w-[1570px] mx-auto px-10">
         {/* Section Header */}
-        <div className="campus-header">
+        <div className="max-w-[720px] mb-20">
           <motion.p
-            className="campus-label"
+            className="inline-block mb-5 px-5 py-2 rounded-full bg-summit-orange-50 text-summit-orange text-sm font-semibold tracking-[0.04em] uppercase leading-none"
             initial={{ y: 60, opacity: 0 }}
             animate={isInView ? { y: 0, opacity: 1 } : {}}
             transition={{ duration: 0.6 }}
@@ -94,7 +97,7 @@ export default function CampusLife() {
             The AMC Advantage
           </motion.p>
           <motion.h2
-            className="campus-title"
+            className="m-0 mb-6 text-deep-midnight text-[52px] leading-[1.15] font-normal -tracking-[0.01em] uppercase max-[640px]:text-4xl"
             initial={{ y: 60, opacity: 0 }}
             animate={isInView ? { y: 0, opacity: 1 } : {}}
             transition={{ duration: 0.7, delay: 0.08 }}
@@ -102,7 +105,7 @@ export default function CampusLife() {
             Why Choose Us?
           </motion.h2>
           <motion.p
-            className="campus-subtitle"
+            className="m-0 max-w-[540px] text-rock-grey text-lg leading-[1.7] font-normal normal-case"
             initial={{ y: 40, opacity: 0 }}
             animate={isInView ? { y: 0, opacity: 1 } : {}}
             transition={{ duration: 0.7, delay: 0.16 }}
@@ -112,11 +115,11 @@ export default function CampusLife() {
         </div>
 
         {/* Feature Grid */}
-        <div className="campus-grid">
+        <div className="grid grid-cols-3 gap-6 max-[1024px]:grid-cols-2 max-[640px]:grid-cols-1">
           {features.map((feature, index) => (
             <motion.div
               key={index}
-              className="campus-card"
+              className="group relative px-8 py-9 bg-white border border-rock-grey/20 rounded-[20px] flex flex-col gap-4 transition-all duration-300 overflow-hidden hover:-translate-y-1.5 hover:shadow-[0_24px_48px_rgba(26,26,46,0.08)] hover:border-rock-grey/30"
               initial={{ y: 50, opacity: 0 }}
               animate={isInView ? { y: 0, opacity: 1 } : {}}
               transition={{
@@ -125,15 +128,21 @@ export default function CampusLife() {
                 ease: "easeOut",
               }}
             >
-              <div className="campus-card-accent" />
-              <div className="campus-card-top">
-                <span className="campus-card-number">{String(index + 1).padStart(2, "0")}</span>
-                <div className="campus-card-icon">
+              <div className="absolute left-0 top-0 bottom-0 w-[3px] bg-summit-orange origin-top scale-y-0 transition-transform duration-300 group-hover:scale-y-100" />
+              <div className="flex items-center justify-between mb-2">
+                <span className="font-serif-display text-rock-grey/25 text-4xl leading-none font-normal">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-alpine-blue-50 text-alpine-blue transition-colors duration-300 group-hover:bg-alpine-blue group-hover:text-white">
                   {feature.icon}
                 </div>
               </div>
-              <h3 className="campus-card-title">{feature.title}</h3>
-              <p className="campus-card-desc">{feature.description}</p>
+              <h3 className="m-0 text-deep-midnight text-xl leading-[1.3] font-medium normal-case">
+                {feature.title}
+              </h3>
+              <p className="m-0 text-rock-grey text-[15px] leading-[1.65] font-normal normal-case">
+                {feature.description}
+              </p>
             </motion.div>
           ))}
         </div>

@@ -25,7 +25,7 @@ const stats = [
 ];
 
 function AnimatedNumber({ value, suffix }: { value: number; suffix: string }) {
-  const [isInView, setIsInView] = useState(false);
+  const [, setIsInView] = useState(false);
   const ref = useRef(null);
   const spring = useSpring(0, { duration: 2000 });
   const display = useTransform(spring, (current) => Math.floor(current));
@@ -69,12 +69,12 @@ export default function CounterStats() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section ref={ref} className="counter-area pb-30!">
-      <div className="container">
-        <div className="section-cotent-wrap grid-item mb-100">
-          <div className="grid-one">
+    <section ref={ref} className="bg-deep-midnight pb-[30px]">
+      <div className="w-full max-w-[1570px] mx-auto px-10 overflow-hidden">
+        <div className="pt-[60px] relative z-0 grid grid-cols-[1fr_2fr] gap-4 mb-[100px]">
+          <div>
             <motion.p
-              className="section-paragraph white"
+              className="text-2xl leading-none uppercase text-white font-normal"
               initial={{ opacity: 0 }}
               animate={isInView ? { opacity: 1 } : {}}
               transition={{ duration: 0.6 }}
@@ -82,9 +82,9 @@ export default function CounterStats() {
               Our Impact
             </motion.p>
           </div>
-          <div className="grid-two">
+          <div>
             <motion.h2
-              className="section-title"
+              className="m-0 text-white text-[56px] leading-[75px] font-normal -tracking-[0.01em] uppercase"
               initial={{ y: 200, opacity: 0 }}
               animate={isInView ? { y: 0, opacity: 1 } : {}}
               transition={{ duration: 0.8, ease: "easeOut" }}
@@ -92,7 +92,7 @@ export default function CounterStats() {
               Numbers that speak
             </motion.h2>
             <motion.h2
-              className="section-title"
+              className="m-0 text-white text-[56px] leading-[75px] font-normal -tracking-[0.01em] uppercase"
               initial={{ y: 200, opacity: 0 }}
               animate={isInView ? { y: 0, opacity: 1 } : {}}
               transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
@@ -101,24 +101,29 @@ export default function CounterStats() {
             </motion.h2>
           </div>
         </div>
-        <div className="counter-single-item-wrap">
+        <div className="grid grid-cols-3 gap-4 justify-items-center">
           {stats.map((stat, index) => (
             <motion.div
               key={index}
-              className={`counter-single-item ${index === 1 ? "ml-left" : ""} ${index === 2 ? "pl-left" : ""}`}
+              className={`relative overflow-hidden items-center ${index === 1 ? "ml-[30px]" : ""}`}
               initial={{ y: 50, opacity: 0.3, skewY: 4 }}
               animate={isInView ? { y: 0, opacity: 1, skewY: 0 } : {}}
               transition={{ duration: 0.6, delay: index * 0.15 }}
             >
-              {index === 2 && <div className="line-two"></div>}
-              <div className="count-number">
-                <h3 className="count-number-title">
+              <div className="flex mb-7">
+                <h3 className="m-0 font-serif-display text-alpine-blue text-[68px] leading-none">
                   <AnimatedNumber value={stat.number} suffix={stat.suffix} />
                 </h3>
-                <h1 className="count-title">{stat.title}</h1>
+                <h1 className="m-0 pl-7 font-display text-white text-[32px] leading-[130%] font-normal capitalize">
+                  {stat.title}
+                </h1>
               </div>
-              <p className="count-paragraph">{stat.description}</p>
-              {index < 2 && <div className="line"></div>}
+              <p className="max-w-[360px] text-white/70 text-lg leading-[130%] font-normal capitalize">
+                {stat.description}
+              </p>
+              {index < 2 && (
+                <div className="absolute right-0 top-0 w-px h-[100px] bg-summit-orange translate-y-1/2" />
+              )}
             </motion.div>
           ))}
         </div>
