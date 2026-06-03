@@ -5,10 +5,10 @@ import { useRef, useEffect, useState } from "react";
 
 const stats = [
   {
-    number: 15,
+    number: 17,
     suffix: "+",
     title: "Years of Excellence",
-    description: "Established in 2009, AMC has been the pioneer management college in the Nepalgunj region for over 15 years.",
+    description: "Established in 2009, AMC has been the pioneer management college in the Nepalgunj region for over 17 years.",
   },
   {
     number: 2,
