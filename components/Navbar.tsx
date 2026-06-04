@@ -63,6 +63,7 @@ export default function Navbar() {
               height={100}
               className="block h-auto w-auto max-h-[60px] sm:max-h-[90px]"
               priority
+              loading="eager"
             />
           </motion.a>
 

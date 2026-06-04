@@ -27,9 +27,10 @@ export default function DevelopCareer() {
               animate={isInView ? { y: 0, opacity: 1 } : {}}
               transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
             >
-              Develop <span className="text-alpine-blue">Your</span>
+              Develop{" "}
               <br className="hidden lg:block" />
-              {" "}<br className="lg:hidden" />
+              <span className="text-alpine-blue">Your</span>
+              <br />
               Career
             </motion.h2>
             <motion.div

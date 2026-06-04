@@ -61,13 +61,14 @@ export default function Hero() {
               className="relative rounded-tl-[80px] rounded-br-[80px] sm:rounded-tl-[120px] sm:rounded-br-[120px] lg:rounded-tl-[200px] lg:rounded-br-[0px] overflow-hidden bg-black/10"
             >
               <Image
-                src="/images/banner.png"
+                src="/homepage/Header.avif"
                 alt="Alpine Management College Campus"
                 width={1680}
                 height={900}
-                className="w-full h-auto object-cover rounded-tl-[80px] sm:rounded-tl-[120px] lg:rounded-tl-[200px]"
+                className="w-full h-[380px] sm:h-[520px] lg:h-[700px] object-cover rounded-tl-[80px] sm:rounded-tl-[120px] lg:rounded-tl-[200px]"
                 priority
               />
+              <div className="absolute inset-0 bg-black/30 rounded-tl-[80px] sm:rounded-tl-[120px] lg:rounded-tl-[200px]" />
             </motion.div>
           </div>
           
