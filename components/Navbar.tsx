@@ -8,8 +8,7 @@ type SubLink = { name: string; href: string };
 type NavLink = { name: string; href: string; submenu?: SubLink[] };
 
 const navLinks: NavLink[] = [
-  { name: "News", href: "#" },
-  { name: "Events", href: "#" },
+  { name: "Home", href: "/" },
   {
     name: "Academics",
     href: "#",
@@ -20,9 +19,9 @@ const navLinks: NavLink[] = [
       { name: "MBA Program", href: "/mba" },
     ],
   },
-  { name: "Research", href: "#" },
+  { name: "Achievements", href: "#" },
   { name: "Admission", href: "#" },
-  { name: "About", href: "#" },
+  { name: "About", href: "/about" },
 ];
 
 const Chevron = ({ className }: { className?: string }) => (
