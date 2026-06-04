@@ -15,9 +15,9 @@ const navLinks: NavLink[] = [
     href: "#",
     submenu: [
       { name: "BBA Program", href: "/bba" },
-      { name: "BHM Program", href: "#" },
-      { name: "BBA Finance", href: "#" },
-      { name: "MBA Program", href: "#" },
+      { name: "BHM Program", href: "/bhm" },
+      { name: "BBA Finance", href: "/bba-finance" },
+      { name: "MBA Program", href: "/mba" },
     ],
   },
   { name: "Research", href: "#" },

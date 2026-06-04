@@ -1,12 +1,12 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FooterCTA from "@/components/FooterCTA";
-import BBAHero from "./components/BBAHero";
-import ProgramOverview from "./components/ProgramOverview";
-import ProgramStats from "./components/ProgramStats";
-import WhyJoinBBA from "./components/WhyJoinBBA";
-import Objectives from "./components/Objectives";
-import CareerProspects from "./components/CareerProspects";
+import BBAHero from "@/components/bba/BBAHero";
+import ProgramOverview from "@/components/bba/ProgramOverview";
+import ProgramStats from "@/components/bba/ProgramStats";
+import WhyJoinBBA from "@/components/bba/WhyJoinBBA";
+import Objectives from "@/components/bba/Objectives";
+import CareerProspects from "@/components/bba/CareerProspects";
 
 export default function BBAPage() {
   return (
