@@ -19,8 +19,9 @@ const navLinks: NavLink[] = [
       { name: "MBA Program", href: "/mba" },
     ],
   },
-  { name: "Achievements", href: "#" },
-  { name: "Admission", href: "#" },
+  { name: "Gallery", href: "/gallery" },
+  { name: "News", href: "/news" },
+  { name: "Downloads", href: "/downloads" },
   { name: "About", href: "/about" },
 ];
 

@@ -3,26 +3,22 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
-const newsItems = [
-  {
-    date: "29 May 2024",
-    title: "REVISED 1ST INTERNAL EXAM SCHEDULE 2023 SPRING",
-  },
-  {
-    date: "27 May 2024",
-    title: "FIRST INTERNAL EXAM SCHEDULE 2023 SPRING",
-  },
-  {
-    date: "22 August 2023",
-    title: "School of Business: Admission Notice for BBA and BBA-BI",
-  },
-  {
-    date: "22 August 2023",
-    title: "Pokhara University Special Chance Exam Notice 2080",
-  },
-];
+type NewsItem = {
+  _id: string;
+  title: string;
+  slug?: { current: string };
+  publishedAt?: string;
+};
 
-export default function News() {
+function formatDate(dateStr: string) {
+  return new Date(dateStr).toLocaleDateString("en-US", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+  });
+}
+
+export default function News({ news = [] }: { news?: NewsItem[] }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
@@ -69,16 +65,40 @@ export default function News() {
           <h3 className="text-summit-orange text-[16px] sm:text-[22px] font-medium uppercase tracking-widest mb-6 text-center md:text-left">
             Latest Notices &amp; Updates
           </h3>
-          <ul className="divide-y divide-rock-grey">
-            {newsItems.map((item, index) => (
-              <li key={index} className="flex flex-col sm:flex-row items-start gap-2 sm:gap-6 py-5">
-                <span className="shrink-0 text-white/50 text-sm sm:text-base font-normal sm:w-[160px]">{item.date}</span>
-                <span className="text-white text-base font-medium leading-relaxed hover:text-summit-orange transition-colors cursor-pointer">
-                  [{item.title}]
-                </span>
-              </li>
-            ))}
-          </ul>
+
+          {news.length === 0 ? (
+            <p className="text-white/40 text-base normal-case text-center md:text-left py-6">
+              No news articles published yet.
+            </p>
+          ) : (
+            <ul className="divide-y divide-rock-grey">
+              {news.map((item) => (
+                <li key={item._id} className="flex flex-col sm:flex-row items-start gap-2 sm:gap-6 py-5">
+                  <span className="shrink-0 text-white/50 text-sm sm:text-base font-normal sm:w-[160px]">
+                    {item.publishedAt ? formatDate(item.publishedAt) : "—"}
+                  </span>
+                  <a
+                    href={item.slug?.current ? `/news/${item.slug.current}` : "/news"}
+                    className="text-white text-base font-medium leading-relaxed hover:text-summit-orange transition-colors no-underline normal-case"
+                  >
+                    [{item.title}]
+                  </a>
+                </li>
+              ))}
+            </ul>
+          )}
+
+          <div className="mt-8 text-center md:text-left">
+            <a
+              href="/news"
+              className="inline-flex items-center gap-2 text-summit-orange text-sm font-semibold uppercase tracking-wide no-underline hover:gap-3 transition-all duration-200"
+            >
+              View All News
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <path d="m9 18 6-6-6-6"/>
+              </svg>
+            </a>
+          </div>
         </motion.div>
 
       </div>

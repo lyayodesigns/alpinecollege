@@ -12,8 +12,22 @@ import Events from "@/components/Events";
 import News from "@/components/News";
 import Footer from "@/components/Footer";
 import FooterCTA from "@/components/FooterCTA";
+import { client } from "@/sanity/lib/client";
 
-export default function Home() {
+async function getLatestNews() {
+  return client.fetch(
+    `*[_type == "news"] | order(publishedAt desc) [0...4] {
+      _id,
+      title,
+      slug,
+      publishedAt
+    }`
+  );
+}
+
+export default async function Home() {
+  const news = await getLatestNews();
+
   return (
     <main>
       <Navbar />
@@ -27,7 +41,7 @@ export default function Home() {
       <Testimonials />
       <ExtracurricularActivities />
       <Events />
-      <News />
+      <News news={news} />
       <FooterCTA />
       <Footer />
     </main>
