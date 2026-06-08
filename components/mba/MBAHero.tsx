@@ -122,7 +122,7 @@ export default function MBAHero() {
           >
             <div className="rounded-tl-[80px] rounded-br-[80px] sm:rounded-tl-[120px] sm:rounded-br-[120px] overflow-hidden">
               <Image
-                src="/images/classroom.png"
+                src="/homepage/MBA Header.avif"
                 alt="MBA Students at Alpine Management College"
                 width={800}
                 height={580}

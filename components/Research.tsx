@@ -6,22 +6,22 @@ import { useRef, useState } from "react";
 
 const researchItems = [
   {
-    image: "/images/research1.png",
+    image: "/homepage/Library.avif",
     title: "Library & Research Center",
     description:
       "A well-managed, spacious reading room featuring a vast collection of basic course books, reference materials, training manuals, and international journals. We provide all required course books for your regular studies.",
   },
   {
-    image: "/images/research2.png",
-    title: "High-Tech Computer Lab",
+    image: "/homepage/site visit.avif",
+    title: "Site Visit",
     description:
-      "A cozy, air-conditioned lab equipped with the latest modern computers and high-speed Wi-Fi. Students can research global trends and complete digital assignments with just a few clicks.",
+      "Hands-on learning beyond the classroom. Our site visits expose students to real-world business environments, industrial operations, and professional settings, bridging the gap between theory and practice.",
   },
   {
-    image: "/images/research1.png",
-    title: "Rooftop Canteen",
+    image: "/homepage/Sport.avif",
+    title: "Sports",
     description:
-      "A vibrant space to relax and recharge. The canteen provides healthy, hygienic foods, tasty snacks, and cold drinks at highly affordable prices for all students and staff.",
+      "We believe in holistic development. Our sports facilities encourage students to stay active, build teamwork, and develop discipline through a range of indoor and outdoor sporting activities.",
   },
 ];
 
@@ -134,7 +134,7 @@ export default function Research() {
                     alt={item.title}
                     width={620}
                     height={400}
-                    className="w-full h-auto rounded-[20px] transition-transform duration-500 group-hover:scale-[1.06]"
+                    className="w-full h-auto max-h-[400px] object-cover rounded-[20px] transition-transform duration-500 group-hover:scale-[1.06]"
                     draggable={false}
                   />
                   <div className="absolute inset-0 rounded-[20px] pointer-events-none opacity-0 transition-opacity duration-300 group-hover:opacity-100 bg-[linear-gradient(180deg,transparent_50%,rgba(26,26,46,0.7)_100%)]" />

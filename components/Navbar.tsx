@@ -22,6 +22,7 @@ const navLinks: NavLink[] = [
   { name: "Gallery", href: "/gallery" },
   { name: "News", href: "/news" },
   { name: "Downloads", href: "/downloads" },
+  { name: "Admission", href: "/admission" },
   { name: "About", href: "/about" },
 ];
 
