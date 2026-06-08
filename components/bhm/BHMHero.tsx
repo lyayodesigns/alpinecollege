@@ -99,7 +99,7 @@ export default function BHMHero() {
               transition={{ duration: 0.6, delay: 0.7 }}
             >
               <a
-                href="#apply"
+                href="/admission"
                 className="inline-block bg-summit-orange text-white font-semibold text-base px-7 py-3.5 rounded-full hover:brightness-110 transition-all no-underline"
               >
                 Apply Now for 2026

@@ -21,7 +21,6 @@ const navLinks: NavLink[] = [
   },
   { name: "Gallery", href: "/gallery" },
   { name: "News", href: "/news" },
-  { name: "Downloads", href: "/downloads" },
   { name: "Admission", href: "/admission" },
   { name: "About", href: "/about" },
 ];
@@ -52,7 +51,7 @@ export default function Navbar() {
       <div className="max-w-[1710px] mx-auto px-4 sm:px-10">
         <div className="flex items-center justify-between py-1">
           <motion.a
-            href="#"
+            href="/"
             className="flex items-center no-underline"
             initial={{ x: -100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}

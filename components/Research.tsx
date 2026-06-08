@@ -157,7 +157,7 @@ export default function Research() {
           transition={{ duration: 0.6, delay: 0.8 }}
         >
           <a
-            href="#"
+            href="/gallery"
             className="group relative flex justify-center items-center mt-[36px] sm:mt-[55px] px-[51px] py-6 border border-summit-orange rounded-full no-underline overflow-hidden transition-colors duration-200 hover:bg-summit-orange w-fit mx-auto"
           >
             <div className="absolute -z-10 w-[500px] h-[500px] rounded-full bg-summit-orange scale-0 group-hover:scale-100 transition-transform duration-500" />

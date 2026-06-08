@@ -67,7 +67,7 @@ export default function AcademicPrograms() {
   const activeProgramDetail = programDetails[activeProgram];
 
   return (
-    <section ref={ref} className="bg-deep-midnight relative overflow-hidden">
+    <section ref={ref} id="programs" className="bg-deep-midnight relative overflow-hidden">
       <div className="w-full max-w-[1570px] mx-auto px-4 sm:px-10 overflow-hidden">
         <div className="pt-[60px]">
           <motion.h2
@@ -147,7 +147,7 @@ export default function AcademicPrograms() {
             </div>
             <p className="text-base leading-[1.75] text-[#c0bfbd] max-w-[800px] normal-case text-center sm:text-left">{activeProgramDetail.description}</p>
             <a
-              href="#apply"
+              href={`/${activeProgram}`}
               className="inline-flex items-center gap-2 mx-auto sm:mx-0 w-fit px-7 py-3 bg-summit-orange text-white text-[15px] font-semibold rounded-full no-underline transition hover:brightness-110"
             >
               {activeProgramDetail.cta}

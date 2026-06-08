@@ -2,26 +2,25 @@
 
 import { motion, useInView } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import { useRef } from "react";
 
 const footerLinks = {
   about: [
-    { name: "About AMC", href: "#" },
-    { name: "History", href: "#" },
+    { name: "About AMC", href: "/about" },
     { name: "Contact Us", href: "#" },
-    { name: "Management Team", href: "#" },
+    { name: "Achievements", href: "/achievements" },
   ],
   department: [
-    { name: "BBA Program", href: "#" },
-    { name: "BHM Program", href: "#" },
-    { name: "Internship", href: "#" },
-    { name: "Scholarship", href: "#" },
+    { name: "BBA Program", href: "/bba" },
+    { name: "BHM Program", href: "/bhm" },
+    { name: "BBA Finance", href: "/bba-finance" },
+    { name: "MBA Program", href: "/mba" },
   ],
   updates: [
-    { name: "Notices", href: "#" },
-    { name: "Events", href: "#" },
-    { name: "Results", href: "#" },
-    { name: "Alumni", href: "#" },
+    { name: "Downloads", href: "/downloads" },
+    { name: "News", href: "/news" },
+    { name: "Gallery", href: "/gallery" },
   ],
 };
 
@@ -46,7 +45,7 @@ function FooterColumn({
       </h3>
       <nav className="block text-center">
         {links.map((link, index) => (
-          <a
+          <Link
             key={index}
             href={link.href}
             className="relative block pb-[18px] text-left no-underline capitalize"
@@ -56,7 +55,7 @@ function FooterColumn({
                 {link.name}
               </span>
             </div>
-          </a>
+          </Link>
         ))}
       </nav>
     </motion.div>
@@ -73,7 +72,7 @@ export default function Footer() {
       className="relative overflow-hidden pt-[60px] sm:pt-[120px] bg-deep-midnight"
     >
       <div className="w-full max-w-[1710px] mx-auto px-4 sm:px-10 overflow-hidden">
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8 sm:gap-6 pb-[60px] sm:pb-[120px]">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8 sm:gap-6 pb-[30px] sm:pb-[60px]">
           <FooterColumn title="About" links={footerLinks.about} delay={0} />
           {/* Contact Column */}
           <motion.div
@@ -115,15 +114,18 @@ export default function Footer() {
             transition={{ duration: 0.6, delay: 0.5 }}
             className="flex flex-col gap-5 col-span-2 sm:col-span-3 lg:col-span-1"
           >
-            {[{ text: "APPLY NOW" }, { text: "SCHOLARSHIP" }, { text: "INTERNSHIP" }].map(
+            {[
+              { text: "APPLY NOW", href: "/admission" },
+              { text: "CONTACT US", href: "/about" },
+            ].map(
               (item, index) => (
-                <a
+                <Link
                   key={index}
-                  href="#"
+                  href={item.href}
                   className="z-0 flex w-full sm:w-[230px] h-14 sm:h-16 px-[1.375rem] py-[0.875rem] justify-center items-center border border-white rounded-full bg-transparent text-white font-bold text-center no-underline transition-colors hover:bg-alpine-blue hover:border-alpine-blue mb-2 sm:mb-5"
                 >
                   <span className="text-xl font-normal no-underline">{item.text}</span>
-                </a>
+                </Link>
               )
             )}
           </motion.div>
@@ -155,14 +157,14 @@ export default function Footer() {
           {/* Social links */}
           <div className="flex items-center gap-3">
             {[
-              { name: "Facebook", icon: "/images/facebook.svg" },
-              { name: "LinkedIn", icon: "/images/linkedin.svg" },
-              { name: "Instagram", icon: "/images/instagram.svg" },
-              { name: "Dribbble", icon: "/images/dribbble.svg" },
+              { name: "Facebook", icon: "/images/facebook.svg", href: "https://www.facebook.com/alpinemcNPJ" },
+              { name: "Instagram", icon: "/images/instagram.svg", href: "https://www.instagram.com/alpinemanagement_" },
             ].map((s, i) => (
               <a
                 key={i}
-                href="#"
+                href={s.href}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group relative flex overflow-hidden w-12 h-12 justify-center items-center flex-none border border-white rounded-full"
               >
                 <div className="absolute inset-0 m-0.5 rounded-full bg-white scale-0 transition-transform duration-300 group-hover:scale-100" />

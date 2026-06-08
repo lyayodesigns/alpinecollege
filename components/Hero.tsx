@@ -38,7 +38,7 @@ export default function Hero() {
               className="flex flex-wrap gap-4 justify-center lg:justify-start"
             >
               <a
-                href="#apply"
+                href="/admission"
                 className="inline-block bg-summit-orange text-white font-semibold text-base px-7 py-3.5 rounded-full hover:brightness-110 transition-all"
               >
                 Apply Now for 2026
