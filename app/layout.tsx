@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import "./globals.css";
 import OrganizationJsonLd from "@/components/seo/OrganizationJsonLd";
 import WebSiteJsonLd from "@/components/seo/WebSiteJsonLd";
 
-const BASE_URL = "https://www.alpinemanagementcollege.edu.np";
+const BASE_URL = "https://alpinemanagement.edu.np";
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
@@ -82,6 +83,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-GZRE3E64EB"
+          strategy="afterInteractive"
+        />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-GZRE3E64EB');
+          `}
+        </Script>
+      </head>
       <body className="font-sans text-deep-midnight bg-snow-white uppercase overflow-x-hidden m-0 p-0">
         <OrganizationJsonLd />
         <WebSiteJsonLd />
