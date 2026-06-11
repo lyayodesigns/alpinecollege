@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { client } from "@/sanity/lib/client";
 
-const BASE_URL = "https://www.alpinemanagementcollege.edu.np";
+const BASE_URL = "https://alpinemanagement.edu.np";
 
 async function getNewsSlugs(): Promise<{ slug: string; publishedAt: string }[]> {
   try {
