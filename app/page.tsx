@@ -13,6 +13,13 @@ import News from "@/components/News";
 import Footer from "@/components/Footer";
 import FooterCTA from "@/components/FooterCTA";
 import { client } from "@/sanity/lib/client";
+import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd";
+
+export const metadata = {
+  alternates: {
+    canonical: "https://www.alpinemanagementcollege.edu.np",
+  },
+};
 
 async function getLatestNews() {
   return client.fetch(
@@ -30,6 +37,11 @@ export default async function Home() {
 
   return (
     <main>
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", url: "https://www.alpinemanagementcollege.edu.np" },
+        ]}
+      />
       <Navbar />
       <Hero />
       <CounterStats />

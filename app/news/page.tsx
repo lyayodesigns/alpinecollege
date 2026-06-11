@@ -4,11 +4,21 @@ import FooterCTA from "@/components/FooterCTA";
 import NewsHero from "@/components/news/NewsHero";
 import NewsGrid from "@/components/news/NewsGrid";
 import { client } from "@/sanity/lib/client";
+import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd";
 
 export const metadata = {
   title: "News & Articles | Alpine Management College",
   description:
     "Stay up to date with the latest news, announcements, and articles from Alpine Management College, Nepalgunj.",
+  alternates: {
+    canonical: "https://www.alpinemanagementcollege.edu.np/news",
+  },
+  openGraph: {
+    title: "News & Articles | Alpine Management College",
+    description:
+      "Latest news and announcements from Alpine Management College (AMC), Nepalgunj.",
+    url: "https://www.alpinemanagementcollege.edu.np/news",
+  },
 };
 
 async function getNews() {
@@ -32,6 +42,12 @@ export default async function NewsPage() {
 
   return (
     <main>
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", url: "https://www.alpinemanagementcollege.edu.np" },
+          { name: "News", url: "https://www.alpinemanagementcollege.edu.np/news" },
+        ]}
+      />
       <Navbar />
       <NewsHero />
       <NewsGrid news={news} />

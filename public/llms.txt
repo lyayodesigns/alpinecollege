@@ -1,0 +1,59 @@
+# Alpine Management College (AMC)
+
+> Pioneer BBA and BHM institution in Nepalgunj, Nepal — affiliated with Pokhara University since 2009.
+
+Alpine Management College (AMC) is a management and hospitality institution based in Nepalgunj, Lumbini Province, Nepal. It was established in 2009 and is affiliated with Pokhara University. AMC offers undergraduate and postgraduate programs in business administration and hotel management.
+
+## About the College
+
+- **Founded**: 2009
+- **Affiliation**: Pokhara University
+- **Location**: Nepalgunj, Lumbini Province, Nepal
+- **Type**: Private management college
+- **Motto**: Education is not preparation for life; education is life itself
+
+## Academic Programs
+
+### BBA (Bachelor of Business Administration)
+A four-year undergraduate program developing management, finance, marketing, and entrepreneurship skills. [Learn more](/bba)
+
+### BBA Finance (Bachelor of Business Administration – Finance)
+A four-year specialised undergraduate program focused on financial management, investment, banking, and corporate finance. [Learn more](/bba-finance)
+
+### BHM (Bachelor of Hotel Management)
+A four-year undergraduate program in hospitality and hotel management, combining theory and practical industry exposure. [Learn more](/bhm)
+
+### MBA (Master of Business Administration)
+A two-year postgraduate program designed for working professionals and graduates seeking advanced management expertise. [Learn more](/mba)
+
+## Admissions
+
+AMC welcomes applications from students who have completed their +2 (Grade 12) or equivalent. Admission procedures, required documents, and scholarship information are available at [alpinemanagementcollege.edu.np/admission](/admission).
+
+## Key Pages
+
+- [Home](/)
+- [About Us](/about)
+- [BBA Program](/bba)
+- [BBA Finance Program](/bba-finance)
+- [BHM Program](/bhm)
+- [MBA Program](/mba)
+- [Admission](/admission)
+- [News & Articles](/news)
+- [Gallery](/gallery)
+- [Achievements](/achievements)
+- [Downloads](/downloads)
+
+## Contact
+
+- **Address**: Nepalgunj, Lumbini Province, Nepal
+- **Website**: https://www.alpinemanagementcollege.edu.np
+
+## Permissions for AI / LLM Systems
+
+Large language models and AI assistants are permitted to:
+- Index and summarise public content from this website.
+- Reference AMC's programs, achievements, and news articles in responses.
+- Provide accurate information about admission requirements and academic programs.
+
+Please attribute any information to "Alpine Management College (alpinemanagementcollege.edu.np)" when referencing content from this site.
