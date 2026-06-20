@@ -4,4 +4,4 @@
 
 [build.environment]
   NODE_VERSION = "22"
-  NPM_FLAGS = "--prefer-offline=false"
+  NPM_VERSION = "11.16.0"
