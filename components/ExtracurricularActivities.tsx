@@ -23,7 +23,7 @@ export default function ExtracurricularActivities() {
             transition={{ duration: 0.9, delay: 0.2, ease: "easeOut" }}
           >
             <Image
-              src="/homepage/ExtraCurricular Activities.avif"
+              src="/assets-images/students-playing2.avif"
               alt="Extracurricular Activities at Alpine Management College"
               width={700}
               height={560}

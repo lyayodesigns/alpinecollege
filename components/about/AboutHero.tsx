@@ -16,7 +16,7 @@ export default function AboutHero() {
       {/* Background image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/banner.png"
+          src="/assets-images/group.avif"
           alt="Alpine Management College"
           fill
           className="object-cover object-center scale-105"

@@ -20,7 +20,7 @@ export default function AboutSection() {
             transition={{ duration: 0.9, delay: 0.2, ease: "easeOut" }}
           >
             <Image
-              src="/homepage/alpine-graduation.avif"
+              src="/assets-images/student1.avif"
               alt="Alpine Management College"
               fill
               className="object-cover"

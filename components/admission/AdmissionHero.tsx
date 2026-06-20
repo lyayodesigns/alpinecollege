@@ -9,7 +9,7 @@ export default function AdmissionHero() {
       {/* Background image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/banner.png"
+          src="/assets-images/group.avif"
           alt="Alpine Management College Admission"
           fill
           className="object-cover object-center scale-105"
