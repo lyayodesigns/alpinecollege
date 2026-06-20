@@ -1,6 +1,7 @@
 "use client";
 
 import { motion, useInView } from "framer-motion";
+import Image from "next/image";
 import { useRef } from "react";
 
 const testimonials = [
@@ -87,9 +88,17 @@ export default function Testimonials() {
               animate={isInView ? { y: 0 } : {}}
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
-              {/* Light spacer */}
+              {/* Student image card */}
               <div className="flex justify-end">
-                <div className="inline-block mb-[30px] p-[42px] rounded-[20px] text-left bg-snow-white border border-rock-grey/20 min-h-[380px] min-w-[390px]" />
+                <div className="relative inline-block mb-[30px] rounded-[20px] overflow-hidden bg-snow-white border border-rock-grey/20 min-h-[380px] min-w-[390px]">
+                  <Image
+                    src="/assets-images/student1.avif"
+                    alt="AMC student"
+                    fill
+                    className="object-cover"
+                    sizes="390px"
+                  />
+                </div>
               </div>
 
               {/* Dark card */}
@@ -118,7 +127,15 @@ export default function Testimonials() {
               ))}
 
               <div className="hidden sm:flex justify-end">
-                <div className="inline-block mb-[30px] p-[42px] rounded-[20px] text-left bg-snow-white border border-rock-grey/20 min-h-[380px] min-w-[390px]" />
+                <div className="relative inline-block mb-[30px] rounded-[20px] overflow-hidden bg-snow-white border border-rock-grey/20 min-h-[380px] min-w-[390px]">
+                  <Image
+                    src="/assets-images/student2.avif"
+                    alt="AMC student"
+                    fill
+                    className="object-cover"
+                    sizes="390px"
+                  />
+                </div>
               </div>
             </motion.div>
           </div>

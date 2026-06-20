@@ -123,7 +123,7 @@ export default function BBAFinanceHero() {
           >
             <div className="rounded-tl-[80px] rounded-br-[80px] sm:rounded-tl-[120px] sm:rounded-br-[120px] overflow-hidden">
               <Image
-                src="/homepage/BBA Finance Header.avif"
+                src="/assets-images/group.avif"
                 alt="BBA Finance Students at Alpine Management College"
                 width={800}
                 height={580}
