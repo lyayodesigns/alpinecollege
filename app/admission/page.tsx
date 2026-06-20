@@ -12,13 +12,13 @@ export const metadata = {
   description:
     "Apply to Alpine Management College (AMC) — learn about entry requirements, admission procedures, required documents, and scholarship schemes for BBA, BHM, and MBA programs.",
   alternates: {
-    canonical: "https://www.alpinemanagementcollege.edu.np/admission",
+    canonical: "https://alpinemanagement.edu.np/admission",
   },
   openGraph: {
     title: "Admission | Alpine Management College",
     description:
       "Apply to AMC Nepalgunj — admission procedures, required documents, and scholarship schemes for BBA, BHM, and MBA programs.",
-    url: "https://www.alpinemanagementcollege.edu.np/admission",
+    url: "https://alpinemanagement.edu.np/admission",
   },
 };
 
@@ -27,8 +27,8 @@ export default function AdmissionPage() {
     <main>
       <BreadcrumbJsonLd
         items={[
-          { name: "Home", url: "https://www.alpinemanagementcollege.edu.np" },
-          { name: "Admission", url: "https://www.alpinemanagementcollege.edu.np/admission" },
+          { name: "Home", url: "https://alpinemanagement.edu.np" },
+          { name: "Admission", url: "https://alpinemanagement.edu.np/admission" },
         ]}
       />
       <Navbar />

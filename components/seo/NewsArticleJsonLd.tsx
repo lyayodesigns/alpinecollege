@@ -33,16 +33,16 @@ export default function NewsArticleJsonLd({
     dateModified: modifiedAt ?? publishedAt,
     author: {
       "@type": "Organization",
-      "@id": "https://www.alpinemanagementcollege.edu.np/#organization",
+      "@id": "https://alpinemanagement.edu.np/#organization",
       name: "Alpine Management College",
     },
     publisher: {
       "@type": "Organization",
-      "@id": "https://www.alpinemanagementcollege.edu.np/#organization",
+      "@id": "https://alpinemanagement.edu.np/#organization",
       name: "Alpine Management College",
       logo: {
         "@type": "ImageObject",
-        url: "https://www.alpinemanagementcollege.edu.np/alpine-logo.avif",
+        url: "https://alpinemanagement.edu.np/alpine-logo.avif",
       },
     },
     isAccessibleForFree: true,

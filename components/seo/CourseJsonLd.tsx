@@ -27,9 +27,9 @@ export default function CourseJsonLd({
     url,
     provider: {
       "@type": "CollegeOrUniversity",
-      "@id": "https://www.alpinemanagementcollege.edu.np/#organization",
+      "@id": "https://alpinemanagement.edu.np/#organization",
       name: "Alpine Management College",
-      sameAs: "https://www.alpinemanagementcollege.edu.np",
+      sameAs: "https://alpinemanagement.edu.np",
     },
     hasCourseInstance: {
       "@type": "CourseInstance",

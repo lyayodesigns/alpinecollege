@@ -8,7 +8,7 @@ import { useRef } from "react";
 const footerLinks = {
   about: [
     { name: "About AMC", href: "/about" },
-    { name: "Contact Us", href: "#" },
+    { name: "Contact Us", href: "/contact" },
     { name: "Achievements", href: "/achievements" },
   ],
   department: [
@@ -98,8 +98,8 @@ export default function Footer() {
               </div>
               <div>
                 <p className="m-0 text-white/50 text-sm uppercase tracking-widest mb-2">Email</p>
-                <a href="mailto:contact@alpinecollege.edu.np" className="no-underline text-white/80 text-lg leading-[170%] normal-case">
-                  contact@alpinecollege.edu.np
+                <a href="mailto:bijay.alpine@gmail.com" className="no-underline text-white/80 text-lg leading-[170%] normal-case">
+                  bijay.alpine@gmail.com
                 </a>
               </div>
             </div>
@@ -116,7 +116,7 @@ export default function Footer() {
           >
             {[
               { text: "APPLY NOW", href: "/admission" },
-              { text: "CONTACT US", href: "/about" },
+              { text: "CONTACT US", href: "/contact" },
             ].map(
               (item, index) => (
                 <Link

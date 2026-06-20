@@ -69,7 +69,7 @@ export default function FooterCTA() {
           transition={{ duration: 0.65, delay: 0.32 }}
         >
           <a
-            href="/about"
+            href="/contact"
             className="group relative flex h-[60px] px-9 items-center justify-center rounded-full bg-summit-orange text-white font-semibold text-base tracking-wide no-underline overflow-hidden transition-all duration-300 hover:bg-summit-orange-600 hover:shadow-[0_16px_40px_rgba(240,122,32,0.35)]"
           >
             Contact Us Now

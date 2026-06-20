@@ -15,13 +15,13 @@ export const metadata = {
   description:
     "Advance your career with the MBA (Master of Business Administration) at Alpine Management College, Nepalgunj — a two-year postgraduate program affiliated with Pokhara University for professionals and graduates.",
   alternates: {
-    canonical: "https://www.alpinemanagementcollege.edu.np/mba",
+    canonical: "https://alpinemanagement.edu.np/mba",
   },
   openGraph: {
     title: "MBA Program | Alpine Management College",
     description:
       "Two-year MBA program at AMC Nepalgunj. Develop advanced management skills with Pokhara University affiliation.",
-    url: "https://www.alpinemanagementcollege.edu.np/mba",
+    url: "https://alpinemanagement.edu.np/mba",
   },
 };
 
@@ -30,14 +30,14 @@ export default function MBAPage() {
     <main>
       <BreadcrumbJsonLd
         items={[
-          { name: "Home", url: "https://www.alpinemanagementcollege.edu.np" },
-          { name: "MBA Program", url: "https://www.alpinemanagementcollege.edu.np/mba" },
+          { name: "Home", url: "https://alpinemanagement.edu.np" },
+          { name: "MBA Program", url: "https://alpinemanagement.edu.np/mba" },
         ]}
       />
       <CourseJsonLd
         name="Master of Business Administration (MBA)"
         description="A two-year postgraduate program designed for working professionals and graduates seeking advanced management expertise at Alpine Management College, Nepalgunj, affiliated with Pokhara University."
-        url="https://www.alpinemanagementcollege.edu.np/mba"
+        url="https://alpinemanagement.edu.np/mba"
         duration="P2Y"
         educationalLevel="Master"
       />

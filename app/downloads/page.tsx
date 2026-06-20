@@ -11,13 +11,13 @@ export const metadata = {
   description:
     "Download brochures, forms, syllabi, and official notices from Alpine Management College, Nepalgunj.",
   alternates: {
-    canonical: "https://www.alpinemanagementcollege.edu.np/downloads",
+    canonical: "https://alpinemanagement.edu.np/downloads",
   },
   openGraph: {
     title: "Downloads | Alpine Management College",
     description:
       "Official brochures, forms, syllabi, and notices from AMC Nepalgunj — free to download.",
-    url: "https://www.alpinemanagementcollege.edu.np/downloads",
+    url: "https://alpinemanagement.edu.np/downloads",
   },
 };
 
@@ -41,8 +41,8 @@ export default async function DownloadsPage() {
     <main>
       <BreadcrumbJsonLd
         items={[
-          { name: "Home", url: "https://www.alpinemanagementcollege.edu.np" },
-          { name: "Downloads", url: "https://www.alpinemanagementcollege.edu.np/downloads" },
+          { name: "Home", url: "https://alpinemanagement.edu.np" },
+          { name: "Downloads", url: "https://alpinemanagement.edu.np/downloads" },
         ]}
       />
       <Navbar />

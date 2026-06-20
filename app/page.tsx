@@ -17,7 +17,7 @@ import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd";
 
 export const metadata = {
   alternates: {
-    canonical: "https://www.alpinemanagementcollege.edu.np",
+    canonical: "https://alpinemanagement.edu.np",
   },
 };
 
@@ -39,7 +39,7 @@ export default async function Home() {
     <main>
       <BreadcrumbJsonLd
         items={[
-          { name: "Home", url: "https://www.alpinemanagementcollege.edu.np" },
+          { name: "Home", url: "https://alpinemanagement.edu.np" },
         ]}
       />
       <Navbar />

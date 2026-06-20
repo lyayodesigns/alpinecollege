@@ -15,13 +15,13 @@ export const metadata = {
   description:
     "Join the BHM (Bachelor of Hotel Management) at Alpine Management College, Nepalgunj — a four-year Pokhara University affiliated program blending hospitality theory with real-world industry training.",
   alternates: {
-    canonical: "https://www.alpinemanagementcollege.edu.np/bhm",
+    canonical: "https://alpinemanagement.edu.np/bhm",
   },
   openGraph: {
     title: "BHM Program | Alpine Management College",
     description:
       "Four-year BHM program at AMC Nepalgunj. Launch your hospitality career with Pokhara University's trusted curriculum.",
-    url: "https://www.alpinemanagementcollege.edu.np/bhm",
+    url: "https://alpinemanagement.edu.np/bhm",
   },
 };
 
@@ -30,14 +30,14 @@ export default function BHMPage() {
     <main>
       <BreadcrumbJsonLd
         items={[
-          { name: "Home", url: "https://www.alpinemanagementcollege.edu.np" },
-          { name: "BHM Program", url: "https://www.alpinemanagementcollege.edu.np/bhm" },
+          { name: "Home", url: "https://alpinemanagement.edu.np" },
+          { name: "BHM Program", url: "https://alpinemanagement.edu.np/bhm" },
         ]}
       />
       <CourseJsonLd
         name="Bachelor of Hotel Management (BHM)"
         description="A four-year undergraduate program in hospitality and hotel management, combining theory and practical industry exposure at Alpine Management College, Nepalgunj, affiliated with Pokhara University."
-        url="https://www.alpinemanagementcollege.edu.np/bhm"
+        url="https://alpinemanagement.edu.np/bhm"
         duration="P4Y"
         educationalLevel="Bachelor"
       />

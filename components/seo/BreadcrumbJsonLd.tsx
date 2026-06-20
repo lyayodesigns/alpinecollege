@@ -13,8 +13,8 @@ interface BreadcrumbJsonLdProps {
  *
  * Usage:
  *   <BreadcrumbJsonLd items={[
- *     { name: "Home", url: "https://www.alpinemanagementcollege.edu.np" },
- *     { name: "BBA Program", url: "https://www.alpinemanagementcollege.edu.np/bba" },
+ *     { name: "Home", url: "https://alpinemanagement.edu.np" },
+ *     { name: "BBA Program", url: "https://alpinemanagement.edu.np/bba" },
  *   ]} />
  */
 export default function BreadcrumbJsonLd({ items }: BreadcrumbJsonLdProps) {

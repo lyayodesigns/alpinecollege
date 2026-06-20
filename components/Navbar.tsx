@@ -23,6 +23,7 @@ const navLinks: NavLink[] = [
   { name: "News", href: "/news" },
   { name: "Admission", href: "/admission" },
   { name: "About", href: "/about" },
+  { name: "Contact", href: "/contact" },
 ];
 
 const Chevron = ({ className }: { className?: string }) => (

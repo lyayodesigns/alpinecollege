@@ -7,7 +7,7 @@ import { client } from "@/sanity/lib/client";
 import NewsArticleJsonLd from "@/components/seo/NewsArticleJsonLd";
 import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd";
 
-const BASE_URL = "https://www.alpinemanagementcollege.edu.np";
+const BASE_URL = "https://alpinemanagement.edu.np";
 
 type Props = { params: Promise<{ slug: string }> };
 

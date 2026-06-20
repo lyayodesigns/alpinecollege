@@ -11,13 +11,13 @@ export const metadata = {
   description:
     "Browse photos from events, campus life, and activities at Alpine Management College, Nepalgunj.",
   alternates: {
-    canonical: "https://www.alpinemanagementcollege.edu.np/gallery",
+    canonical: "https://alpinemanagement.edu.np/gallery",
   },
   openGraph: {
     title: "Gallery | Alpine Management College",
     description:
       "Campus life, events, and student activities at AMC Nepalgunj — captured in photos.",
-    url: "https://www.alpinemanagementcollege.edu.np/gallery",
+    url: "https://alpinemanagement.edu.np/gallery",
   },
 };
 
@@ -43,8 +43,8 @@ export default async function GalleryPage() {
     <main>
       <BreadcrumbJsonLd
         items={[
-          { name: "Home", url: "https://www.alpinemanagementcollege.edu.np" },
-          { name: "Gallery", url: "https://www.alpinemanagementcollege.edu.np/gallery" },
+          { name: "Home", url: "https://alpinemanagement.edu.np" },
+          { name: "Gallery", url: "https://alpinemanagement.edu.np/gallery" },
         ]}
       />
       <Navbar />

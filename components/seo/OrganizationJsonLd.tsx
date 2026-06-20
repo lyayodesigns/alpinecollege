@@ -7,17 +7,17 @@ export default function OrganizationJsonLd() {
   const schema = {
     "@context": "https://schema.org",
     "@type": ["CollegeOrUniversity", "EducationalOrganization"],
-    "@id": "https://www.alpinemanagementcollege.edu.np/#organization",
+    "@id": "https://alpinemanagement.edu.np/#organization",
     name: "Alpine Management College",
     alternateName: "AMC Nepalgunj",
-    url: "https://www.alpinemanagementcollege.edu.np",
+    url: "https://alpinemanagement.edu.np",
     logo: {
       "@type": "ImageObject",
-      url: "https://www.alpinemanagementcollege.edu.np/alpine-logo.avif",
+      url: "https://alpinemanagement.edu.np/alpine-logo.avif",
       width: 200,
       height: 60,
     },
-    image: "https://www.alpinemanagementcollege.edu.np/og-image.jpg",
+    image: "https://alpinemanagement.edu.np/og-image.jpg",
     description:
       "Alpine Management College (AMC) is the pioneer BBA and BHM institution in Nepalgunj, Nepal — affiliated with Pokhara University since 2009. Offering BBA, BBA (Finance), BHM, and MBA programs.",
     foundingDate: "2009",
@@ -48,7 +48,7 @@ export default function OrganizationJsonLd() {
         {
           "@type": "Course",
           name: "Bachelor of Business Administration (BBA)",
-          url: "https://www.alpinemanagementcollege.edu.np/bba",
+          url: "https://alpinemanagement.edu.np/bba",
           provider: {
             "@type": "CollegeOrUniversity",
             name: "Alpine Management College",
@@ -57,7 +57,7 @@ export default function OrganizationJsonLd() {
         {
           "@type": "Course",
           name: "Bachelor of Business Administration – Finance (BBA Finance)",
-          url: "https://www.alpinemanagementcollege.edu.np/bba-finance",
+          url: "https://alpinemanagement.edu.np/bba-finance",
           provider: {
             "@type": "CollegeOrUniversity",
             name: "Alpine Management College",
@@ -66,7 +66,7 @@ export default function OrganizationJsonLd() {
         {
           "@type": "Course",
           name: "Bachelor of Hotel Management (BHM)",
-          url: "https://www.alpinemanagementcollege.edu.np/bhm",
+          url: "https://alpinemanagement.edu.np/bhm",
           provider: {
             "@type": "CollegeOrUniversity",
             name: "Alpine Management College",
@@ -75,7 +75,7 @@ export default function OrganizationJsonLd() {
         {
           "@type": "Course",
           name: "Master of Business Administration (MBA)",
-          url: "https://www.alpinemanagementcollege.edu.np/mba",
+          url: "https://alpinemanagement.edu.np/mba",
           provider: {
             "@type": "CollegeOrUniversity",
             name: "Alpine Management College",

@@ -11,13 +11,13 @@ export const metadata = {
   description:
     "Discover the achievements of Alpine Management College students and alumni — from industry placements to student testimonials that highlight AMC's commitment to excellence.",
   alternates: {
-    canonical: "https://www.alpinemanagementcollege.edu.np/achievements",
+    canonical: "https://alpinemanagement.edu.np/achievements",
   },
   openGraph: {
     title: "Achievements | Alpine Management College",
     description:
       "Student and alumni achievements at AMC Nepalgunj — placements, awards, and success stories.",
-    url: "https://www.alpinemanagementcollege.edu.np/achievements",
+    url: "https://alpinemanagement.edu.np/achievements",
   },
 };
 
@@ -26,8 +26,8 @@ export default function AchievementsPage() {
     <main>
       <BreadcrumbJsonLd
         items={[
-          { name: "Home", url: "https://www.alpinemanagementcollege.edu.np" },
-          { name: "Achievements", url: "https://www.alpinemanagementcollege.edu.np/achievements" },
+          { name: "Home", url: "https://alpinemanagement.edu.np" },
+          { name: "Achievements", url: "https://alpinemanagement.edu.np/achievements" },
         ]}
       />
       <Navbar />
