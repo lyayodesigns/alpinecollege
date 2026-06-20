@@ -8,19 +8,16 @@ const testimonials = [
   {
     quote:
       "AMC gave me not just a degree but the confidence and skills to face the real world. The faculty’s guidance and the internship experience were truly life-changing.",
-    name: "Sanjay Thapa",
     role: "BBA Graduate",
   },
   {
     quote:
       "My internship in Dubai through AMC’s BHM program opened doors I never imagined. The college’s industry connections and dedicated mentors made all the difference.",
-    name: "Priya Sharma",
     role: "BHM Graduate",
   },
   {
     quote:
       "The scholarship, the Wi-Fi-enabled classrooms, and the extra-curricular activities at AMC create the perfect environment to grow both academically and personally.",
-    name: "Anil KC",
     role: "BBA Student",
   },
 ];
@@ -37,9 +34,6 @@ function DarkCard({ t, hoverShadow }: { t: typeof testimonials[number]; hoverSha
       </p>
       <div className="flex items-center">
         <div className="ml-0">
-          <h4 className="mt-0 text-white leading-[18px] font-normal capitalize">
-            {t.name}
-          </h4>
           <p className="m-0 text-white/50 leading-[14px] capitalize">{t.role}</p>
         </div>
       </div>

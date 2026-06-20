@@ -59,7 +59,7 @@ export default function About() {
             transition={{ duration: 0.9, delay: 0.2, ease: "easeOut" }}
           >
             <Image
-              src="/homepage/Empowering the next genertaion of Leaders.avif"
+              src="/assets-images/students-playing1.avif"
               alt="Alpine Management College Campus"
               width={700}
               height={560}
