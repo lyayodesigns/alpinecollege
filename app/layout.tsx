@@ -68,9 +68,9 @@ export const metadata: Metadata = {
     images: [`${BASE_URL}/og-image.jpg`],
   },
   icons: {
-    icon: "/icon.svg",
-    shortcut: "/icon.svg",
-    apple: "/apple-touch-icon.png",
+    icon: "/favicon.avif",
+    shortcut: "/favicon.avif",
+    apple: "/favicon.avif",
   },
   manifest: "/site.webmanifest",
   category: "education",
